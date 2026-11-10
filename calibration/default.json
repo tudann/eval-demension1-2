@@ -1,0 +1,7 @@
+{
+  "version": "unfitted-2026-10-21",
+  "policy": "Objective metrics expose raw values only until thresholds are fitted against human 1-5 labels.",
+  "minimum_samples_per_metric": 5,
+  "required_buckets": ["clear_success", "minor_defect", "partial_success", "clear_failure", "difficult_condition"],
+  "metrics": {}
+}

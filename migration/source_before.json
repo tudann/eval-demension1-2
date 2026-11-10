@@ -1,0 +1,142 @@
+{
+  "01_instruction_following.py": {
+    "sha256": "3495722387cf64c5db42eaa6b86e486976ea2c5489e7f39c24339fc64336ca73",
+    "size": 107,
+    "mtime_ns": 1793670762389417332
+  },
+  "02_visual_quality.py": {
+    "sha256": "bf5776b0d930f284c40410572f5e6b95ff6612846328e13de0ab08388aa88e6e",
+    "size": 107,
+    "mtime_ns": 1793670762389661706
+  },
+  "run_dimension.py": {
+    "sha256": "d9a94094d0927582ad55f4bf40a83a724ef5a27253aec7bd1e79dc49cb11cdfa",
+    "size": 899,
+    "mtime_ns": 1793670762400639949
+  },
+  "evaluate.py": {
+    "sha256": "a9fea412ea1b94e1976324e376aca7e33ffb67f2c8b1901831d34a7e17edff3e",
+    "size": 1352,
+    "mtime_ns": 1793670762395926623
+  },
+  "evaluate_batch.py": {
+    "sha256": "78d79d808496d4e3c46801c69bfe504bdbd645351ad57328901fe955ee4d237a",
+    "size": 1385,
+    "mtime_ns": 1793670762396207275
+  },
+  "requirements.txt": {
+    "sha256": "fe00ebbbc4a848dea0dc91bc22c4fdde65fbb711a960bfc91b3469bd62a6cfc1",
+    "size": 46,
+    "mtime_ns": 1793670762399948821
+  },
+  "requirements.portable.txt": {
+    "sha256": "9c06314d6401b20e2f3885e2924193187902714a723f5480df05830f070a6e6f",
+    "size": 421,
+    "mtime_ns": 1793670762399153914
+  },
+  "selfcheck.py": {
+    "sha256": "4a623d8bbb9f92e2a26f74482906fc9deac8e6ffcba08613715bae91ad740605",
+    "size": 491,
+    "mtime_ns": 1793670762404520106
+  },
+  "pytest.ini": {
+    "sha256": "8fa307d1ef787f3822b949dc90f1b3c405769c4eb97bb2e813b271109d9d8a90",
+    "size": 57,
+    "mtime_ns": 1793688423822524911
+  },
+  "environment_manifest.json": {
+    "sha256": "275415aa58a0ec13aedf37f16206d16ab178e6aa4c41a3100b1f33486fcd7f8e",
+    "size": 3087,
+    "mtime_ns": 1793670762395116259
+  },
+  "video_eval/report.py": {
+    "sha256": "d9c733cef8ef0a490882f34be811106d5bb91a6e8f3dc4e99484061842b78b41",
+    "size": 1614,
+    "mtime_ns": 1793670762413665623
+  },
+  "video_eval/insightface_adapter.py": {
+    "sha256": "b2365c2080fb1e7fadac6503178ef4c165888acce28cfebe7de0abe7ad863e32",
+    "size": 3516,
+    "mtime_ns": 1793678129403155979
+  },
+  "video_eval/pipeline.py": {
+    "sha256": "4d13bbc26c07621a83e85728fafc4e0806710115a1d024b3b0f363174678c55c",
+    "size": 36915,
+    "mtime_ns": 1793678770890017000
+  },
+  "video_eval/qwen.py": {
+    "sha256": "ed1032f0a5c0dc4ed8c04ae533a893b60dea1b76f89afe0afa2d6f1839c9ef25",
+    "size": 9800,
+    "mtime_ns": 1793670762413001000
+  },
+  "video_eval/vbench2_worker.py": {
+    "sha256": "ace460895e51e5b7325353fa1ec998320f5162462e42286528d3a807f05026be",
+    "size": 1932,
+    "mtime_ns": 1793670762415417918
+  },
+  "video_eval/depth_adapter.py": {
+    "sha256": "091769c18a6a81641941de2f2de247af6c804a9f451413d5154dfb8b8b82a5a5",
+    "size": 2072,
+    "mtime_ns": 1793670762409206800
+  },
+  "video_eval/rubrics.py": {
+    "sha256": "9f3986d876c4097555b771e07abc353b7ebd46c421e7aef50fa19a6cbdee18d8",
+    "size": 5284,
+    "mtime_ns": 1793670762414121000
+  },
+  "video_eval/vbench_adapter.py": {
+    "sha256": "522608d2bd8206e76953d6368032993b219829497098b188a832f71d5cdce8f7",
+    "size": 6752,
+    "mtime_ns": 1793670762415821000
+  },
+  "video_eval/__init__.py": {
+    "sha256": "ea3beec3c977e834e0c4d42eb003289fb17e381d4362714f41bf3765997dd1cb",
+    "size": 444,
+    "mtime_ns": 1793670762408462965
+  },
+  "video_eval/cotracker_adapter.py": {
+    "sha256": "e59d9e78138f55ef7c80a77e149ee764ff96c7cfc6280538dcd24d17e49b8c16",
+    "size": 2358,
+    "mtime_ns": 1793670762408844640
+  },
+  "video_eval/schema.py": {
+    "sha256": "bb4720893839fa1eab5d7998c55d4c7b2dee6f16d6e5db1c9d1b5af1139f5d50",
+    "size": 1021,
+    "mtime_ns": 1793670762414702188
+  },
+  "video_eval/pose_adapter.py": {
+    "sha256": "b7f2fb804a7cdebc81e345bc862529cf502f036f6e3db48cd9091a1808b95232",
+    "size": 5395,
+    "mtime_ns": 1793677349351517000
+  },
+  "video_eval/features.py": {
+    "sha256": "852a132498ca0b65a4dd1480a8c3402067c9be26244617a82a8c6ab1e66c7a1a",
+    "size": 3738,
+    "mtime_ns": 1793670762409545825
+  },
+  "video_eval/registry.py": {
+    "sha256": "19dab84728428d89a1086096507d940d0df65ecf525770820a1acba37866d405",
+    "size": 5061,
+    "mtime_ns": 1793670762413366000
+  },
+  "video_eval/vbench2_adapter.py": {
+    "sha256": "d032669742e54dfb537857718308028a47e5bb937dc2abc2e63dd2c2be5b0ea5",
+    "size": 9183,
+    "mtime_ns": 1793679274013724000
+  },
+  "video_eval/grounded_sam2_adapter.py": {
+    "sha256": "d3ab6012d33c3f0dc6f3748c578e3dca498d94f7cc84328b1de13ff3d723ac16",
+    "size": 4537,
+    "mtime_ns": 1793670762409940000
+  },
+  "video_eval/prompt_parser.py": {
+    "sha256": "487f96ca4f869f698d5a22e5cc4ac425de293d76a211479ef1bca0e0dba09942",
+    "size": 3075,
+    "mtime_ns": 1793670762412567521
+  },
+  "video_eval/interaction.py": {
+    "sha256": "e1454a355214a156dd3af28755309d9c7e9f7c678baacf86d8e6863f98d0e129",
+    "size": 4487,
+    "mtime_ns": 1793670762410561000
+  }
+}

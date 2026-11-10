@@ -1,0 +1,64 @@
+# Server runtime environments, model weights and generated output
+/.venv/
+/envs/
+/models/
+/.python/
+/.backup/
+/.cache/
+/.deps/
+/.tmp/
+/results/
+
+# Nested upstream Git metadata remains local; vendor source is tracked here.
+.git/
+
+# Python/build caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.eggs/
+build/
+dist/
+node_modules/
+
+# Model/checkpoint and compiled binaries
+*.[pP][tT]
+*.[pP][tT][hH]
+*.[cC][kK][pP][tT]
+*.[oO][nN][nN][xX]
+*.safetensors
+*.[bB][iI][nN]
+*.[hH]5
+*.[hH][dD][fF]5
+*.so
+*.o
+*.a
+*.pyd
+*.dll
+*.exe
+
+# Video samples and animated demos remain on the server
+*.[mM][pP]4
+*.[mM][oO][vV]
+*.[aA][vV][iI]
+*.[mM][kK][vV]
+*.[wW][eE][bB][mM]
+*.[gG][iI][fF]
+
+# Local secrets and editor files
+.env
+.env.*
+!.env.example
+!.env.template
+*.key
+*.pem
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

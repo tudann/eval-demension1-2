@@ -1,0 +1,4 @@
+SUPPLEMENT_START D1.2
+SUPPLEMENT_END {"metric": "D1.2", "returncode": 0, "elapsed_seconds": 187.75, "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/supplemental_fixed/D1.2/010201.json", "metrics": [{"dimension_id": "D1.2", "status": "SUCCESS", "score": 1, "error": null}]}
+SUPPLEMENT_START D1.4
+SUPPLEMENT_END {"metric": "D1.4", "returncode": 2, "elapsed_seconds": 126.66, "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/supplemental_fixed/D1.4/010401.json", "metrics": [{"dimension_id": "D1.4", "status": "MODEL_UNAVAILABLE", "score": null, "error": "QwenUnavailable: prompt extraction failed validation: atom 3: target_count must be null outside count atoms; split count into its own atom"}]}

@@ -1,0 +1,4 @@
+SUPPLEMENT_START D1.2
+SUPPLEMENT_END {"metric": "D1.2", "returncode": 0, "elapsed_seconds": 39.58, "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/supplemental/D1.2/010201.json", "metrics": [{"dimension_id": "D1.2", "status": "NOT_APPLICABLE", "score": null, "error": null}]}
+SUPPLEMENT_START D1.4
+SUPPLEMENT_END {"metric": "D1.4", "returncode": 0, "elapsed_seconds": 68.42, "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/supplemental/D1.4/010401.json", "metrics": [{"dimension_id": "D1.4", "status": "INSUFFICIENT_EVIDENCE", "score": null, "error": null}]}

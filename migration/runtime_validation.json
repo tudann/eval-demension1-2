@@ -1,0 +1,282 @@
+{
+  "ok": true,
+  "checks": {
+    "metric_counts": {
+      "D1": 11,
+      "D2": 7
+    },
+    "imports": {
+      "numpy": {
+        "version": "2.5.4",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/.venv/lib/python3.12/site-packages/numpy/__init__.py"
+      },
+      "cv2": {
+        "version": "5.0.0",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/.venv/lib/python3.12/site-packages/cv2/__init__.py"
+      },
+      "torch": {
+        "version": "2.14.1+cu130",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/.venv/lib/python3.12/site-packages/torch/__init__.py"
+      },
+      "torchvision": {
+        "version": "0.29.2+cu132",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/.venv/lib/python3.12/site-packages/torchvision/__init__.py"
+      },
+      "scipy": {
+        "version": "1.18.1",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/.venv/lib/python3.12/site-packages/scipy/__init__.py"
+      },
+      "onnxruntime": {
+        "version": "1.31.1",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/.venv/lib/python3.12/site-packages/onnxruntime/__init__.py"
+      },
+      "pyiqa": {
+        "version": "0.1.15.post2",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/.venv/lib/python3.12/site-packages/pyiqa/__init__.py"
+      },
+      "clip": {
+        "version": "unknown",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/.venv/lib/python3.12/site-packages/clip/__init__.py"
+      },
+      "sam2": {
+        "version": "unknown",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/third_party/Grounded-SAM-2/sam2/__init__.py"
+      },
+      "grounding_dino": {
+        "version": "unknown",
+        "file": "None"
+      },
+      "cotracker": {
+        "version": "unknown",
+        "file": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/third_party/co-tracker/cotracker/__init__.py"
+      },
+      "video_depth_anything": {
+        "version": "unknown",
+        "file": "None"
+      }
+    },
+    "weights_checked": 20,
+    "shared_runtime_links": [
+      {
+        "path": ".venv/bin/python3",
+        "target": "/usr/bin/python3"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cuda_crt-13.4.92.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cuda_crt-13.4.92.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cublas-13.1.1.3.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cublas-13.1.1.3.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/include",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/include"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cuda",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cuda"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cuda_runtime-13.0.96.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cuda_runtime-13.0.96.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cudnn",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cudnn"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cuda_bindings-13.4.4.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cuda_bindings-13.4.4.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cuda_core-1.2.2.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cuda_core-1.2.2.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/torchvision-0.29.2.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/torchvision-0.29.2.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cuda_pathfinder-1.8.5.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cuda_pathfinder-1.8.5.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/torch",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/torch"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_ml_py-13.615.71.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_ml_py-13.615.71.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cufile-1.15.1.6.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cufile-1.15.1.6.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cuda_nvrtc-13.0.88.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cuda_nvrtc-13.0.88.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cuda_python-13.4.4.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cuda_python-13.4.4.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_libs_core-4.8.0.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_libs_core-4.8.0.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cuda_cupti-13.0.85.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cuda_cupti-13.0.85.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cusparse-12.6.3.3.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cusparse-12.6.3.3.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_nvjitlink-13.4.92.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_nvjitlink-13.4.92.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cudnn_frontend-1.32.1.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cudnn_frontend-1.32.1.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cufft-12.0.0.61.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cufft-12.0.0.61.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/torch-2.14.1.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/torch-2.14.1.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_nvtx-13.0.85.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_nvtx-13.0.85.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/torchvision",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/torchvision"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_nvshmem_cu13-3.4.5.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_nvshmem_cu13-3.4.5.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_libs_base-4.8.0.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_libs_base-4.8.0.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/triton",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/triton"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_libs_cu12-4.8.0.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_libs_cu12-4.8.0.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_libs_cu13-4.8.0.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_libs_cu13-4.8.0.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cusolver-12.0.4.66.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cusolver-12.0.4.66.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_curand-10.4.0.35.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_curand-10.4.0.35.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/functorch",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/functorch"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cuda_cccl-13.3.4.3.1.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cuda_cccl-13.3.4.3.1.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cuda_toolkit-13.0.3.0.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cuda_toolkit-13.0.3.0.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cudnn_cu13-9.24.0.43.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cudnn_cu13-9.24.0.43.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cuda_tile-1.6.0rc5.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cuda_tile-1.6.0rc5.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cuda_nvcc-13.4.92.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cuda_nvcc-13.4.92.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_mathdx-25.6.0.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_mathdx-25.6.0.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_nvvm-13.4.92.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_nvvm-13.4.92.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cusparselt_cu13-0.8.1.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cusparselt_cu13-0.8.1.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/torchvision.libs",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/torchvision.libs"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/triton-3.8.0.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/triton-3.8.0.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_nccl_cu13-2.30.7.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_nccl_cu13-2.30.7.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cutlass_dsl",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cutlass_dsl-4.8.0.dist-info",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl-4.8.0.dist-info"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/torchgen",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/torchgen"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/cutile_cache",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/cutile_cache"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_packages.pth",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl_packages.pth"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/example.py",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/example.py"
+      },
+      {
+        "path": ".venv/lib/python3.12/site-packages/pynvml.py",
+        "target": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/models/.venv/lib/python3.12/site-packages/pynvml.py"
+      }
+    ],
+    "anatomy_runtime": "{\"python\": \"3.10.22 (main, Oct  9 2026, 15:21:30) [Clang 22.1.3 ]\", \"torch\": \"2.1.2+cu121\", \"mmcv\": \"2.1.0\", \"mmdet\": \"3.3.0\", \"mmyolo\": \"0.6.0\"}",
+    "judge": {
+      "endpoint": "http://127.0.0.1:8011/v1",
+      "models": [
+        "Qwen3-VL-32B-Instruct"
+      ]
+    },
+    "original_source": {
+      "files_checked": 28,
+      "changed": []
+    }
+  },
+  "failures": []
+}

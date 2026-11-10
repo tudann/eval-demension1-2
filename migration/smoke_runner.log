@@ -1,0 +1,4 @@
+SMOKE_START D1
+SMOKE_END {"dimension": 1, "returncode": 0, "elapsed_seconds": 212.58, "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/D1/010101.json", "summary": {"requested": 11, "status_counts": {"SUCCESS": 8, "NOT_APPLICABLE": 1, "INSUFFICIENT_EVIDENCE": 1, "NEEDS_REVIEW": 1}, "scored": 9}, "failures": [], "ok": true}
+SMOKE_START D2
+SMOKE_END {"dimension": 2, "returncode": 0, "elapsed_seconds": 456.9, "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/D2/020101.json", "summary": {"requested": 7, "status_counts": {"UNCALIBRATED": 4, "SUCCESS": 2, "NEEDS_REVIEW": 1}, "scored": 7}, "failures": [], "ok": true}

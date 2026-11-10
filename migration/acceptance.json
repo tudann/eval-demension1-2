@@ -1,0 +1,202 @@
+{
+  "ok": true,
+  "complete": true,
+  "real_inference": true,
+  "returncodes": {
+    "batch_D1": 0,
+    "spatial_D1.4": 0
+  },
+  "results": [
+    {
+      "name": "D1",
+      "ok": true,
+      "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/validated/batch_D1/D1/seedance-2-0-mini/010101/010101.json",
+      "summary": {
+        "requested": 11,
+        "status_counts": {
+          "SUCCESS": 9,
+          "UNCALIBRATED": 1,
+          "NOT_APPLICABLE": 1
+        },
+        "scored": 9
+      },
+      "metrics": [
+        {
+          "dimension_id": "D1.1",
+          "status": "SUCCESS",
+          "score": 3,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.2",
+          "status": "SUCCESS",
+          "score": 3,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.3",
+          "status": "SUCCESS",
+          "score": 3,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.4",
+          "status": "UNCALIBRATED",
+          "score": null,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.5",
+          "status": "SUCCESS",
+          "score": 5,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.6",
+          "status": "SUCCESS",
+          "score": 3,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.7",
+          "status": "SUCCESS",
+          "score": 5,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.8",
+          "status": "SUCCESS",
+          "score": 3,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.9",
+          "status": "SUCCESS",
+          "score": 4,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.10",
+          "status": "NOT_APPLICABLE",
+          "score": null,
+          "error": null
+        },
+        {
+          "dimension_id": "D1.11",
+          "status": "SUCCESS",
+          "score": 2,
+          "error": null
+        }
+      ],
+      "failures": []
+    },
+    {
+      "name": "D2",
+      "ok": true,
+      "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/D2/020101.json",
+      "summary": {
+        "requested": 7,
+        "status_counts": {
+          "UNCALIBRATED": 4,
+          "SUCCESS": 2,
+          "NEEDS_REVIEW": 1
+        },
+        "scored": 7
+      },
+      "metrics": [
+        {
+          "dimension_id": "D2.1",
+          "status": "UNCALIBRATED",
+          "score": 3.7,
+          "error": null
+        },
+        {
+          "dimension_id": "D2.2",
+          "status": "UNCALIBRATED",
+          "score": 4.83,
+          "error": null
+        },
+        {
+          "dimension_id": "D2.3",
+          "status": "UNCALIBRATED",
+          "score": 5.0,
+          "error": null
+        },
+        {
+          "dimension_id": "D2.4",
+          "status": "SUCCESS",
+          "score": 5,
+          "error": null
+        },
+        {
+          "dimension_id": "D2.5",
+          "status": "SUCCESS",
+          "score": 5,
+          "error": null
+        },
+        {
+          "dimension_id": "D2.6",
+          "status": "NEEDS_REVIEW",
+          "score": 5,
+          "error": null
+        },
+        {
+          "dimension_id": "D2.7",
+          "status": "UNCALIBRATED",
+          "score": 3.62,
+          "error": null
+        }
+      ],
+      "failures": []
+    },
+    {
+      "name": "D1.2_targeted",
+      "ok": true,
+      "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/supplemental_fixed/D1.2/010201.json",
+      "summary": {
+        "requested": 1,
+        "status_counts": {
+          "SUCCESS": 1
+        },
+        "scored": 1
+      },
+      "metrics": [
+        {
+          "dimension_id": "D1.2",
+          "status": "SUCCESS",
+          "score": 1,
+          "error": null
+        }
+      ],
+      "failures": []
+    },
+    {
+      "name": "D1.4_targeted",
+      "ok": true,
+      "report": "/pfs/pfs-spMCeu/eval_team/Video-eval/LT/eval_demension_1_2/results/migration_smoke_20261104/validated/spatial_D1.4/010401.json",
+      "summary": {
+        "requested": 1,
+        "status_counts": {
+          "UNCALIBRATED": 1
+        },
+        "scored": 0
+      },
+      "metrics": [
+        {
+          "dimension_id": "D1.4",
+          "status": "UNCALIBRATED",
+          "score": null,
+          "error": null
+        }
+      ],
+      "failures": []
+    }
+  ],
+  "accepted_at": "2026-11-04T17:51:43.774170+08:00",
+  "environment_ok": true,
+  "weights_verified": 20,
+  "unit_tests_passed": 17,
+  "source_unchanged": true,
+  "source_files_verified": 28,
+  "syntax_files_verified": 38
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "third_party/DWPose/mmpose/projects/yolox_pose/demo",
+    "old": "'../../demo\\n'",
+    "new": "../../demo",
+    "exists": true
+  },
+  {
+    "path": "third_party/DWPose/mmpose/projects/yolox_pose/tools",
+    "old": "'../../tools\\n'",
+    "new": "../../tools",
+    "exists": true
+  },
+  {
+    "path": "third_party/DWPose/mmpose/projects/yolox_pose/configs/_base_/datasets",
+    "old": "'../../../../configs/_base_/datasets\\n'",
+    "new": "../../../../configs/_base_/datasets",
+    "exists": true
+  }
+]

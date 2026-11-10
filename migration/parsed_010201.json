@@ -1,0 +1,546 @@
+{
+  "atoms": [
+    {
+      "id": "1",
+      "type": "scene",
+      "text": "Ultra-realistic cinematic live-action nature footage with bright natural light and a premium outdoor-film grade, warm golds against deep forest greens.",
+      "subjects": [],
+      "objects": [],
+      "attributes": [
+        "ultra-realistic",
+        "cinematic",
+        "live-action",
+        "nature footage",
+        "bright natural light",
+        "premium outdoor-film grade",
+        "warm golds",
+        "deep forest greens"
+      ],
+      "target_count": 0,
+      "relation": "background",
+      "order": 1,
+      "critical": true
+    },
+    {
+      "id": "2",
+      "type": "scene",
+      "text": "A primeval European forest on an autumn morning.",
+      "subjects": [],
+      "objects": [],
+      "attributes": [
+        "primeval",
+        "European forest",
+        "autumn morning"
+      ],
+      "target_count": 0,
+      "relation": "background",
+      "order": 2,
+      "critical": true
+    },
+    {
+      "id": "3",
+      "type": "attribute",
+      "text": "Golden sunlight slants through the tall canopy from upper right, cutting visible shafts through drifting bands of thin fog between mossy, ivy-flecked trunks.",
+      "subjects": [],
+      "objects": [
+        "sunlight",
+        "canopy",
+        "fog",
+        "trunks"
+      ],
+      "attributes": [
+        "golden",
+        "slanting",
+        "upper right",
+        "visible shafts",
+        "drifting",
+        "thin fog",
+        "mossy",
+        "ivy-flecked"
+      ],
+      "target_count": 0,
+      "relation": "spatial",
+      "order": 3,
+      "critical": true
+    },
+    {
+      "id": "4",
+      "type": "attribute",
+      "text": "The damp floor glistens with russet and brown fallen leaves.",
+      "subjects": [],
+      "objects": [
+        "floor",
+        "leaves"
+      ],
+      "attributes": [
+        "damp",
+        "glistening",
+        "russet",
+        "brown",
+        "fallen"
+      ],
+      "target_count": 0,
+      "relation": "spatial",
+      "order": 4,
+      "critical": true
+    },
+    {
+      "id": "5",
+      "type": "subject",
+      "text": "Center frame stands a wild apple tree with a rugged bark-ridged trunk.",
+      "subjects": [
+        "wild apple tree"
+      ],
+      "objects": [
+        "trunk"
+      ],
+      "attributes": [
+        "center frame",
+        "wild",
+        "rugged",
+        "bark-ridged"
+      ],
+      "target_count": 1,
+      "relation": "spatial",
+      "order": 5,
+      "critical": true
+    },
+    {
+      "id": "6",
+      "type": "subject",
+      "text": "From the mid-canopy one sturdy branch extends to the right bearing exactly eight ripe red apples, each separate and countable in a horizontal row, waxy skins catching tiny sun highlights.",
+      "subjects": [
+        "branch",
+        "apples"
+      ],
+      "objects": [
+        "apples"
+      ],
+      "attributes": [
+        "mid-canopy",
+        "sturdy",
+        "extends to right",
+        "exactly eight",
+        "ripe",
+        "red",
+        "separate",
+        "countable",
+        "horizontal row",
+        "waxy skins",
+        "sun highlights"
+      ],
+      "target_count": 8,
+      "relation": "spatial",
+      "order": 6,
+      "critical": true
+    },
+    {
+      "id": "7",
+      "type": "subject",
+      "text": "At lower left, in profile-rear view, a European male hunter around 35 years old in a dark brown leather hunting jacket, dark green trousers, and tall brown leather boots holds a traditional wooden slingshot at chest height, facing the tree.",
+      "subjects": [
+        "hunter"
+      ],
+      "objects": [
+        "slingshot",
+        "tree"
+      ],
+      "attributes": [
+        "lower left",
+        "profile-rear view",
+        "European male",
+        "35 years old",
+        "dark brown leather jacket",
+        "dark green trousers",
+        "tall brown leather boots",
+        "traditional wooden slingshot",
+        "chest height",
+        "facing tree"
+      ],
+      "target_count": 1,
+      "relation": "spatial",
+      "order": 7,
+      "critical": true
+    },
+    {
+      "id": "8",
+      "type": "camera",
+      "text": "The camera uses a 35mm medium-wide lens and pushes in with small amplitude at slow speed from behind the hunter's shoulder, keeping both the hunter and the full eight-apple branch in frame without overlap.",
+      "subjects": [
+        "camera"
+      ],
+      "objects": [
+        "hunter",
+        "branch"
+      ],
+      "attributes": [
+        "35mm medium-wide lens",
+        "pushes in",
+        "small amplitude",
+        "slow speed",
+        "from behind hunter's shoulder",
+        "no overlap"
+      ],
+      "target_count": 0,
+      "relation": "spatial",
+      "order": 8,
+      "critical": true
+    },
+    {
+      "id": "9",
+      "type": "action",
+      "text": "At 00:03.000, the shot cuts to alternating close side profiles of the hunter and tighter views of the branch.",
+      "subjects": [
+        "hunter",
+        "branch"
+      ],
+      "objects": [],
+      "attributes": [
+        "close side profiles",
+        "tighter views",
+        "alternating"
+      ],
+      "target_count": 0,
+      "relation": "temporal",
+      "order": 9,
+      "critical": true
+    },
+    {
+      "id": "10",
+      "type": "action",
+      "text": "His hands pull the leather pouch back in one swift practiced motion, weight settling onto his back foot, then release — a sharp snap and a whistle as a small stone strikes a left-side apple; the apple jolts, its stem snaps, and the branch shivers and rebounds with trembling leaves.",
+      "subjects": [
+        "hunter",
+        "stone",
+        "apple",
+        "branch"
+      ],
+      "objects": [
+        "apple",
+        "branch"
+      ],
+      "attributes": [
+        "swift practiced motion",
+        "weight on back foot",
+        "release",
+        "sharp snap",
+        "whistle",
+        "strikes left-side apple",
+        "jolts",
+        "stem snaps",
+        "shivers",
+        "rebounds",
+        "trembling leaves"
+      ],
+      "target_count": 1,
+      "relation": "causal",
+      "order": 10,
+      "critical": true
+    },
+    {
+      "id": "11",
+      "type": "action",
+      "text": "He reloads instantly, pinching the second stone into the pouch; the second snap sends a stone into a different apple further right, which tears free as the branch quakes again.",
+      "subjects": [
+        "hunter",
+        "stone",
+        "apple",
+        "branch"
+      ],
+      "objects": [
+        "apple",
+        "branch"
+      ],
+      "attributes": [
+        "instantly reloads",
+        "pinching second stone",
+        "second snap",
+        "different apple further right",
+        "tears free",
+        "branch quakes"
+      ],
+      "target_count": 1,
+      "relation": "causal",
+      "order": 11,
+      "critical": true
+    },
+    {
+      "id": "12",
+      "type": "action",
+      "text": "A third draw, third snap, and the third stone connects with a third distinct apple.",
+      "subjects": [
+        "hunter",
+        "stone",
+        "apple"
+      ],
+      "objects": [
+        "apple"
+      ],
+      "attributes": [
+        "third draw",
+        "third snap",
+        "third stone",
+        "connects",
+        "third distinct apple"
+      ],
+      "target_count": 1,
+      "relation": "causal",
+      "order": 12,
+      "critical": true
+    },
+    {
+      "id": "13",
+      "type": "attribute",
+      "text": "Each hit is a discrete causal event — stone contact, stem break, apple detaching and dropping — while the five untouched apples stay fixed, swaying only slightly with the branch's vibration.",
+      "subjects": [
+        "apple",
+        "branch"
+      ],
+      "objects": [
+        "apples"
+      ],
+      "attributes": [
+        "discrete causal event",
+        "stone contact",
+        "stem break",
+        "apple detaching",
+        "dropping",
+        "untouched apples",
+        "fixed",
+        "slight sway"
+      ],
+      "target_count": 5,
+      "relation": "causal",
+      "order": 13,
+      "critical": true
+    },
+    {
+      "id": "14",
+      "type": "camera",
+      "text": "At 00:06.000, the camera cuts to a low position just above the leaf-covered ground, tilting and panning with small amplitude at normal speed to follow the falling apples.",
+      "subjects": [
+        "camera"
+      ],
+      "objects": [
+        "apples",
+        "ground"
+      ],
+      "attributes": [
+        "low position",
+        "just above ground",
+        "tilting",
+        "panning",
+        "small amplitude",
+        "normal speed",
+        "follow falling apples"
+      ],
+      "target_count": 0,
+      "relation": "spatial",
+      "order": 14,
+      "critical": true
+    },
+    {
+      "id": "15",
+      "type": "action",
+      "text": "The first apple drops through a gap in the leaves, catching a shaft of golden light, hits the damp leaves and bounces slightly upward before settling.",
+      "subjects": [
+        "apple"
+      ],
+      "objects": [
+        "leaves",
+        "light"
+      ],
+      "attributes": [
+        "drops",
+        "gap in leaves",
+        "catches golden light",
+        "hits damp leaves",
+        "bounces upward",
+        "settles"
+      ],
+      "target_count": 1,
+      "relation": "causal",
+      "order": 15,
+      "critical": true
+    },
+    {
+      "id": "16",
+      "type": "action",
+      "text": "The second lands a beat later and rolls toward the exposed roots at the tree's base, nudging leaves aside.",
+      "subjects": [
+        "apple"
+      ],
+      "objects": [
+        "roots",
+        "tree",
+        "leaves"
+      ],
+      "attributes": [
+        "lands a beat later",
+        "rolls",
+        "exposed roots",
+        "tree base",
+        "nudging leaves aside"
+      ],
+      "target_count": 1,
+      "relation": "causal",
+      "order": 16,
+      "critical": true
+    },
+    {
+      "id": "17",
+      "type": "action",
+      "text": "The third hits with a soft thud and rolls a short distance before friction stops it.",
+      "subjects": [
+        "apple"
+      ],
+      "objects": [],
+      "attributes": [
+        "hits with soft thud",
+        "rolls short distance",
+        "friction stops"
+      ],
+      "target_count": 1,
+      "relation": "causal",
+      "order": 17,
+      "critical": true
+    },
+    {
+      "id": "18",
+      "type": "attribute",
+      "text": "All three come to rest clearly separated, red skins faintly dusted with leaf fragments.",
+      "subjects": [
+        "apples"
+      ],
+      "objects": [],
+      "attributes": [
+        "come to rest",
+        "clearly separated",
+        "red skins",
+        "faintly dusted",
+        "leaf fragments"
+      ],
+      "target_count": 3,
+      "relation": "spatial",
+      "order": 18,
+      "critical": true
+    },
+    {
+      "id": "19",
+      "type": "camera",
+      "text": "At 00:09.000, the camera rises quickly backward and upward into a slightly high wide composition embracing the whole tree, the hunter at lower left still holding the slingshot, and the ground below.",
+      "subjects": [
+        "camera"
+      ],
+      "objects": [
+        "tree",
+        "hunter",
+        "ground"
+      ],
+      "attributes": [
+        "rises quickly",
+        "backward and upward",
+        "slightly high wide composition",
+        "embraces whole tree",
+        "hunter at lower left",
+        "holding slingshot",
+        "ground below"
+      ],
+      "target_count": 0,
+      "relation": "spatial",
+      "order": 19,
+      "critical": true
+    },
+    {
+      "id": "20",
+      "type": "attribute",
+      "text": "The count is legible at a glance: exactly five red apples remaining on the right-reaching branch and exactly three on the leafy ground — eight in total, no more, no fewer.",
+      "subjects": [
+        "apples"
+      ],
+      "objects": [
+        "branch",
+        "ground"
+      ],
+      "attributes": [
+        "legible at a glance",
+        "exactly five",
+        "remaining on branch",
+        "exactly three",
+        "on ground",
+        "eight in total",
+        "no more, no fewer"
+      ],
+      "target_count": 8,
+      "relation": "count",
+      "order": 20,
+      "critical": true
+    },
+    {
+      "id": "21",
+      "type": "attribute",
+      "text": "Mist drifts gently through the backlit canopy as the camera holds a static wide shot, steady, on this final frame.",
+      "subjects": [
+        "mist",
+        "canopy",
+        "camera"
+      ],
+      "objects": [],
+      "attributes": [
+        "drifts gently",
+        "backlit canopy",
+        "static wide shot",
+        "steady",
+        "final frame"
+      ],
+      "target_count": 0,
+      "relation": "spatial",
+      "order": 21,
+      "critical": true
+    },
+    {
+      "id": "22",
+      "type": "negative",
+      "text": "No captions, text, watermark, narration, other people, animals, or other fruit appear at any point.",
+      "subjects": [],
+      "objects": [],
+      "attributes": [
+        "no captions",
+        "no text",
+        "no watermark",
+        "no narration",
+        "no other people",
+        "no animals",
+        "no other fruit"
+      ],
+      "target_count": 0,
+      "relation": "exclusion",
+      "order": 22,
+      "critical": true
+    }
+  ],
+  "subject_labels": [
+    "wild apple tree",
+    "hunter",
+    "apple",
+    "branch",
+    "stone",
+    "camera"
+  ],
+  "object_labels": [
+    "sunlight",
+    "canopy",
+    "fog",
+    "trunks",
+    "floor",
+    "leaves",
+    "slingshot",
+    "tree",
+    "ground",
+    "roots",
+    "mist"
+  ],
+  "has_people": true,
+  "has_interaction": true,
+  "parser_model": "Qwen3-VL-32B-Instruct"
+}

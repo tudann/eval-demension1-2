@@ -1,0 +1,564 @@
+--- source/run_dimension.py
++++ migrated/run_dimension.py
+@@ -13,9 +13,11 @@
+     parser.add_argument("--prompt")
+     parser.add_argument("--reference", action="append", default=[])
+     parser.add_argument("--output-dir", default="reports")
++    parser.add_argument("--sample-fps", type=float, default=2.0)
++    parser.add_argument("--max-frames", type=int, default=48)
+     args = parser.parse_args()
+     report = evaluate(EvaluationRequest(args.video, args.prompt, args.reference,
+-                                        enabled_dimensions=[dimension]))
++                                        enabled_dimensions=[dimension], sample_fps=args.sample_fps, max_frames=args.max_frames))
+     paths = write_reports(report, args.output_dir)
+     print(json.dumps({"summary": report["summary"], "reports": paths}, ensure_ascii=False, indent=2))
+-    return 0 if not report["summary"]["status_counts"].get("failed") else 2
++    return 2 if any(m["status"] in ("ERROR", "MODEL_UNAVAILABLE") or m.get("error") for m in report["metrics"]) else 0
+--- source/evaluate.py
++++ migrated/evaluate.py
+@@ -8,15 +8,15 @@
+ 
+ 
+ def parser() -> argparse.ArgumentParser:
+-    value = argparse.ArgumentParser(description="Evaluate generated video on dimensions D1-D6")
++    value = argparse.ArgumentParser(description="Evaluate generated video on dimensions D1-D2")
+     value.add_argument("video")
+     value.add_argument("--prompt")
+     value.add_argument("--reference", action="append", default=[])
+     value.add_argument("--metric", action="append", dest="metrics")
+-    value.add_argument("--dimension", action="append", type=int, dest="dimensions", choices=range(1, 7))
++    value.add_argument("--dimension", action="append", type=int, dest="dimensions", choices=(1, 2))
+     value.add_argument("--output-dir", default="reports")
+-    value.add_argument("--sample-fps", type=float, default=4.0)
+-    value.add_argument("--max-frames", type=int, default=96)
++    value.add_argument("--sample-fps", type=float, default=2.0)
++    value.add_argument("--max-frames", type=int, default=48)
+     return value
+ 
+ 
+@@ -27,7 +27,7 @@
+     report = evaluate(request)
+     paths = write_reports(report, args.output_dir)
+     print(json.dumps({"summary": report["summary"], "reports": paths}, ensure_ascii=False, indent=2))
+-    return 0 if not report["summary"]["status_counts"].get("failed") else 2
++    return 2 if any(m["status"] in ("ERROR", "MODEL_UNAVAILABLE") or m.get("error") for m in report["metrics"]) else 0
+ 
+ 
+ if __name__ == "__main__":
+--- source/evaluate_batch.py
++++ migrated/evaluate_batch.py
+@@ -1,33 +1,77 @@
++"""Evaluate existing videos from a JSON/CSV manifest using D1/D2."""
+ from __future__ import annotations
+ 
+ import argparse
+ import csv
+ import json
+ from pathlib import Path
++import re
+ 
+ from video_eval import EvaluationRequest, evaluate
+ from video_eval.report import write_reports
+ 
++BAD = {'ERROR', 'MODEL_UNAVAILABLE'}
+ 
+-def main() -> int:
+-    parser = argparse.ArgumentParser(description="Batch evaluation from CSV")
+-    parser.add_argument("manifest", help="CSV with video_path and optional prompt/reference_images columns")
+-    parser.add_argument("--output-dir", default="reports")
+-    parser.add_argument("--dimension", action="append", type=int, dest="dimensions", choices=range(1, 7))
++def safe_name(value):
++    return re.sub(r'[^\w.-]+', '_', str(value)) or 'unknown'
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('manifest', help='JSON list or CSV with video_path, prompt, optional dimension/model/reference_images')
++    parser.add_argument('--dimension', action='append', type=int, choices=(1, 2), dest='dimensions')
++    parser.add_argument('--output-dir', default='reports/batch')
++    parser.add_argument('--sample-fps', type=float, default=2)
++    parser.add_argument('--max-frames', type=int, default=48)
++    parser.add_argument('--limit', type=int)
++    parser.add_argument('--resume', action='store_true')
++    parser.add_argument('--retry-errors', action='store_true')
+     args = parser.parse_args()
+-    rows = list(csv.DictReader(Path(args.manifest).open(encoding="utf-8-sig")))
+-    summaries = []
+-    for row in rows:
+-        refs = [item for item in row.get("reference_images", "").split(";") if item]
+-        report = evaluate(EvaluationRequest(row["video_path"], row.get("prompt") or None, refs,
+-                                            enabled_dimensions=args.dimensions))
+-        paths = write_reports(report, args.output_dir)
+-        summaries.append({"video_path": row["video_path"], **report["summary"], **paths})
+-    summary_path = Path(args.output_dir) / "batch_summary.json"
+-    summary_path.write_text(json.dumps(summaries, ensure_ascii=False, indent=2), encoding="utf-8")
+-    print(summary_path)
+-    return 0
++    manifest = Path(args.manifest).resolve()
++    with manifest.open(encoding='utf-8-sig') as f:
++        rows = json.load(f) if manifest.suffix.lower() == '.json' else list(csv.DictReader(f))
++    if not isinstance(rows, list):
++        parser.error('manifest must contain a list of rows')
++    if args.limit is not None and args.limit < 1:
++        parser.error('--limit must be positive')
++    output = Path(args.output_dir).resolve()
++    summaries, failures = [], 0
++    eligible = [r for r in rows if not args.dimensions or not r.get('dimension') or int(r['dimension']) in args.dimensions]
++    for row in eligible[:args.limit]:
++        dims = [int(row['dimension'])] if row.get('dimension') else (args.dimensions or [1, 2])
++        if set(dims) - {1, 2}:
++            parser.error(f'unsupported dimension: {dims}')
++        video = Path(row['video_path']).expanduser()
++        video = video if video.is_absolute() else manifest.parent/video
++        refs = row.get('reference_images') or []
++        if isinstance(refs, str):
++            refs = [r for r in refs.split(';') if r]
++        refs = [str(p if p.is_absolute() else manifest.parent/p) for p in map(Path, refs)]
++        subdir = output/('D'+'_'.join(map(str, dims)))/safe_name(row.get('model', 'default'))/safe_name(row.get('case_id', video.stem))
++        existing = subdir/(video.stem+'.json')
++        try:
++            report = None
++            if (args.resume or args.retry_errors) and existing.is_file():
++                candidate = json.loads(existing.read_text())
++                if not args.retry_errors or not any(m['status'] in BAD or m.get('error') for m in candidate['metrics']):
++                    report = candidate
++            if report is None:
++                report = evaluate(EvaluationRequest(str(video), row.get('prompt') or None, refs,
++                    metadata={k:row[k] for k in ('case_id', 'model', 'original_prompt') if k in row},
++                    enabled_dimensions=dims, sample_fps=args.sample_fps, max_frames=args.max_frames))
++                paths = write_reports(report, subdir)
++            else:
++                paths = {'json':str(existing)}
++            bad = [m['dimension_id'] for m in report['metrics'] if m['status'] in BAD or m.get('error')]
++            failures += bool(bad)
++            summaries.append({'video_path':str(video), 'dimensions':dims, 'summary':report['summary'], 'failed_metrics':bad, 'reports':paths})
++        except Exception as exc:
++            failures += 1
++            summaries.append({'video_path':str(video), 'dimensions':dims, 'error':f'{type(exc).__name__}: {exc}'})
++        output.mkdir(parents=True, exist_ok=True)
++        (output/'batch_summary.json').write_text(json.dumps(summaries, ensure_ascii=False, indent=2), encoding='utf-8')
++    print(json.dumps({'videos':len(summaries), 'failed_videos':failures, 'summary':str(output/'batch_summary.json')}, ensure_ascii=False))
++    return 2 if failures else 0
+ 
++if __name__ == '__main__':
++    raise SystemExit(main())
+ 
+-if __name__ == "__main__":
+-    raise SystemExit(main())
+--- source/selfcheck.py
++++ migrated/selfcheck.py
+@@ -1,11 +1,11 @@
+ from video_eval.registry import METRICS
+ from pathlib import Path
+ 
+-assert len(METRICS) == 48
+-assert len({metric.id for metric in METRICS}) == 48
+-assert [sum(metric.id.startswith(f"D{i}.") for metric in METRICS) for i in range(1, 7)] == [11, 7, 6, 8, 8, 8]
++assert len(METRICS) == 18
++assert len({metric.id for metric in METRICS}) == 18
++assert [sum(metric.id.startswith(f"D{i}.") for metric in METRICS) for i in range(1, 3)] == [11, 7]
+ qwen_source = (Path(__file__).parent / "video_eval" / "qwen.py").read_text()
+ assert 'MODEL = "Qwen3-VL-32B-Instruct"' in qwen_source
+ assert "ALLOWED_DEPLOYMENTS" in qwen_source
+ 
+-print("registry=ok metrics=48 distribution=11,7,6,8,8,8")
++print("registry=ok metrics=18 distribution=11,7")
+--- source/environment_manifest.json
++++ migrated/environment_manifest.json
+@@ -4,10 +4,6 @@
+     "VBench": {
+       "path": "third_party/VBench",
+       "commit": "fd18b3d055cb0fc6f066ca90fe2c3c8cbb698490"
+-    },
+-    "T2V-CompBench": {
+-      "path": "third_party/T2V-CompBench",
+-      "commit": "dd5eff7b93af0550b9efa2bdabbb21b3b017ceda"
+     },
+     "Grounded-SAM-2": {
+       "path": "third_party/Grounded-SAM-2",
+@@ -20,80 +16,112 @@
+     "Video-Depth-Anything": {
+       "path": "third_party/Video-Depth-Anything",
+       "commit": "4f5ae23172ba60fd7bc11ef671cca678842c7072"
+-    },
+-    "MMPose": {
+-      "path": "third_party/mmpose",
+-      "commit": "759b39c13fea6ba094afc1fa932f51dc1b11cbf9"
+-    },
+-    "InsightFace": {
+-      "path": "third_party/insightface",
+-      "commit": "c6c3af7bd2d0a0bf4b78c78437357f3521aa5d52"
+     }
+   },
+   "weights": [
+     {
++      "path": "models/cotracker/scaled_offline.pth",
++      "bytes": 101890938,
++      "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
++    },
++    {
++      "path": "models/dwpose/dw-ll_ucoco_384.onnx",
++      "bytes": 134399116,
++      "sha256": "724f4ff2439ed61afb86fb8a1951ec39c6220682803b4a8bd4f598cd913b1843"
++    },
++    {
++      "path": "models/dwpose/yolox_l.onnx",
++      "bytes": 216746733,
++      "sha256": "7860ae79de6c89a3c1eb72ae9a2756c0ccfbe04b7791bb5880afabd97855a411"
++    },
++    {
+       "path": "models/groundingdino/groundingdino_swint_ogc.pth",
+-      "present": true,
+       "bytes": 693997677,
+       "sha256": "3b3ca2563c77c69f651d7bd133e97139c186df06231157a64c507099c52bc799"
+     },
+     {
++      "path": "models/huggingface/hub/models--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/model.safetensors",
++      "bytes": 440449768,
++      "sha256": "68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3"
++    },
++    {
++      "path": "models/huggingface/hub/models--openai--clip-vit-base-patch32/.no_exist/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268/model.safetensors",
++      "bytes": 0,
++      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
++    },
++    {
++      "path": "models/huggingface/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268/pytorch_model.bin",
++      "bytes": 605247071,
++      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f"
++    },
++    {
+       "path": "models/sam2/sam2.1_hiera_small.pt",
+-      "present": true,
+       "bytes": 184416285,
+       "sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38"
+     },
+     {
+-      "path": "models/cotracker/scaled_offline.pth",
+-      "present": true,
+-      "bytes": 101890938,
+-      "sha256": "2670d4562ed69326dda775a26e54883925cd11b6fc9b24cb7aa9f8078bce7834"
++      "path": "models/torch/hub/checkpoints/cotracker2.pth",
++      "bytes": 204396415,
++      "sha256": "362f5274376d610dc987b6daf2c2fefe63e06e1835f4ec1a10d0a15c5a4eef4f"
+     },
+     {
+-      "path": "models/video_depth_anything/video_depth_anything_vits.pth",
+-      "present": true,
+-      "bytes": 116440756,
+-      "sha256": "13379300b739e659f076a59d52e9801bd8d38c541a7e71f73bbca4dcfb013609"
++      "path": "models/torch/hub/checkpoints/retinaface_resnet50_2020-07-20.pth",
++      "bytes": 109559799,
++      "sha256": "b9fdd58c474d809b67166130b42d5913f00b48f912a3491565bc56b8a8a796f2"
+     },
+     {
+-      "path": "models/dwpose/yolox_l.onnx",
+-      "present": true,
+-      "bytes": 216746733,
+-      "sha256": "7860ae79de6c89a3c1eb72ae9a2756c0ccfbe04b7791bb5880afabd97855a411"
++      "path": "models/vbench/aesthetic/sa_0_4_vit_l_14_linear.pth",
++      "bytes": 4071,
++      "sha256": "2cd4e60f4f24ae3bcd57b847b13c1f3ba27edc28cc1a7f9ce74ee9f421243cba"
+     },
+     {
+-      "path": "models/dwpose/dw-ll_ucoco_384.onnx",
+-      "present": true,
+-      "bytes": 134399116,
+-      "sha256": "724f4ff2439ed61afb86fb8a1951ec39c6220682803b4a8bd4f598cd913b1843"
++      "path": "models/vbench/amt/amt-s.pth",
++      "bytes": 12038359,
++      "sha256": "07e7e03405c213fe4405678db9b42d05671e48c56faf6a441b99bb0047d3cf77"
+     },
+     {
+-      "path": "models/vbench2/arcface/resnet18_110.pth",
+-      "present": true,
+-      "bytes": 102585335,
+-      "sha256": "69554b3184575bdda7ecf7f40caf2b0c5ecbd0617b676d2209d8bf0e7e3d8042"
++      "path": "models/vbench/clip/ViT-L-14.pt",
++      "bytes": 932768134,
++      "sha256": "b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836"
+     },
+     {
+-      "path": "models/vbench2/anomaly_detector/human.pth",
+-      "present": true,
+-      "bytes": 346836337,
+-      "sha256": "d4615d34e31ba65181ebd73d26e9823fbc7360945dbd4c982c0be35c51a1647b"
++      "path": "models/vbench/pyiqa/musiq_spaq_ckpt-358bb6af.pth",
++      "bytes": 108610983,
++      "sha256": "358bb6af275e28ea56821d44fb55c6cb83645db11f394d3ad65b2d149965ab50"
++    },
++    {
++      "path": "models/vbench2/YOLO-World/yolo_world_v2_xl_obj365v1_goldg_cc3mlite_pretrain-5daf1395.pth",
++      "bytes": 673005606,
++      "sha256": "5daf1395eb25b6f5adf27781022add7f20b70afdb107e725ccffc5ecc471dc7d"
+     },
+     {
+       "path": "models/vbench2/anomaly_detector/face.pth",
+-      "present": true,
+       "bytes": 346836124,
+       "sha256": "9201a739fca365e641ae41b3307ea618cb8ff855d10cb3bff62b1069878ab4bc"
+     },
+     {
+       "path": "models/vbench2/anomaly_detector/hand.pth",
+-      "present": true,
+       "bytes": 346836124,
+       "sha256": "b13d4522f4b5441925e4e25983013c5a9a8643ff99753732c8a64f1917b6d6a8"
++    },
++    {
++      "path": "models/vbench2/anomaly_detector/human.pth",
++      "bytes": 346836337,
++      "sha256": "d4615d34e31ba65181ebd73d26e9823fbc7360945dbd4c982c0be35c51a1647b"
++    },
++    {
++      "path": "models/vbench2/arcface/resnet18_110.pth",
++      "bytes": 102585335,
++      "sha256": "69554b3184575bdda7ecf7f40caf2b0c5ecbd0617b676d2209d8bf0e7e3d8042"
++    },
++    {
++      "path": "models/video_depth_anything/video_depth_anything_vits.pth",
++      "bytes": 116440756,
++      "sha256": "13379300b739e659f076a59d52e9801bd8d38c541a7e71f73bbca4dcfb013609"
+     }
+   ],
+-  "llava_video": {
+-    "path": "models/lmms-lab/LLaVA-Video-7B-Qwen2",
+-    "present": true
+-  }
++  "dimensions": [
++    1,
++    2
++  ]
+ }--- source/video_eval/pipeline.py
++++ migrated/video_eval/pipeline.py
+@@ -151,7 +151,9 @@
+         except Exception as exc:
+             shared["prompt_error"] = f"{type(exc).__name__}: {exc}"
+     if metric.id.startswith("D1.") and "prompt_error" in shared and "prompt" not in shared:
+-        return _insufficient(metric, f"prompt parse failed once for this video: {shared['prompt_error']}")
++        result = _unavailable(metric, "prompt parser failed; visual constraints were not evaluated")
++        result.error = shared["prompt_error"]
++        return result
+     if metric.id.startswith("D1."):
+         atoms = relevant_atoms(shared["prompt"], metric.id)
+         # These clips were selected for the dimension, so a missing parser atom
+@@ -170,7 +172,12 @@
+     if metric.id in grounding_metrics:
+         labels = []
+         if "prompt" in shared:
+-            labels = shared["prompt"].get("subject_labels", [])
++            labels = list(shared["prompt"].get("subject_labels", []))
++            # Counts/spatial constraints can target props, not just people.
++            # Include their canonical atom labels so detection can align them.
++            if metric.id in {"D1.2", "D1.4"}:
++                labels = list(dict.fromkeys(labels + [
++                    subject for atom in atoms or [] for subject in atom.get("subjects", [])]))
+             if metric.id.startswith("D6.") or metric.id in {"D1.10", "D1.11"}:
+                 labels = list(labels) + list(shared["prompt"].get("object_labels", []))
+         if not labels and metric.id.startswith(("D4.", "D5.", "D6.")):
+--- source/video_eval/qwen.py
++++ migrated/video_eval/qwen.py
+@@ -146,7 +146,7 @@
+ 
+ 
+ def judge(video: VideoFeatures, metric_id: str, name: str, prompt: str | None, evidence: dict[str, Any]) -> dict:
+-    endpoint = os.getenv("QWEN3_VL_ENDPOINT", "http://127.0.0.1:8013/v1")
++    endpoint = os.getenv("QWEN3_VL_ENDPOINT", "http://127.0.0.1:8011/v1")
+     api_key = os.getenv("QWEN3_VL_API_KEY")
+     configured_model = os.getenv("QWEN3_VL_MODEL", MODEL)
+     if configured_model not in ALLOWED_DEPLOYMENTS:
+--- source/video_eval/registry.py
++++ migrated/video_eval/registry.py
+@@ -64,13 +64,15 @@
+     ("D6.8", "交互后状态保持", "COMPOSED", "grounded_sam2+cotracker3", "UNCALIBRATED", 0),
+ ]
+ 
+-METRICS = tuple(MetricSpec(a, b, c, d, e, bool(f)) for a, b, c, d, e, f in _ROWS)
++METRICS = tuple(MetricSpec(a, b, c, d, e, bool(f)) for a, b, c, d, e, f in _ROWS if a.startswith(("D1.", "D2.")))
+ BY_ID = {metric.id: metric for metric in METRICS}
+ 
+ 
+ def select(enabled: list[str] | None = None, dimensions: list[int] | None = None) -> list[MetricSpec]:
+     ids = set(enabled or [])
+     dims = set(dimensions or [])
++    if dims - {1, 2}:
++        raise ValueError("Only dimensions 1 and 2 are available")
+     unknown = ids - BY_ID.keys()
+     if unknown:
+         raise ValueError(f"unknown metric ids: {sorted(unknown)}")
+--- source/video_eval/vbench2_adapter.py
++++ migrated/video_eval/vbench2_adapter.py
+@@ -12,7 +12,7 @@
+ ROOT = Path(__file__).resolve().parents[1]
+ REPO = ROOT / "third_party" / "VBench" / "VBench-2.0"
+ MODELS = ROOT / "models" / "vbench2"
+-ISOLATED_PYTHON = ROOT.parent / "envs" / "vbench2" / "bin" / "python"
++ISOLATED_PYTHON = ROOT / "envs" / "vbench2" / "bin" / "python"
+ WORKER = ROOT / "video_eval" / "vbench2_worker.py"
+ 
+ 
+--- source/video_eval/prompt_parser.py
++++ migrated/video_eval/prompt_parser.py
+@@ -2,61 +2,120 @@
+ 
+ import json
+ import os
++import time
+ import urllib.request
+ from functools import lru_cache
++from pathlib import Path
+ 
+ from .qwen import ALLOWED_DEPLOYMENTS, MODEL, QwenUnavailable
+ 
+-ATOM_TYPES = {"subject", "count", "attribute", "spatial", "action", "scene", "style", "camera", "negative"}
++ATOM_TYPES = {'subject', 'count', 'attribute', 'spatial', 'action', 'scene', 'style', 'camera', 'negative'}
++SPATIAL_RELATIONS = {'left', 'right', 'above', 'below', 'front', 'behind'}
+ 
++def response_schema():
++    strings = {'type':'array','items':{'type':'string'}}
++    atom = {'type':'object','additionalProperties':False,'properties':{
++        'id':{'type':'string'}, 'type':{'type':'string','enum':sorted(ATOM_TYPES)},
++        'text':{'type':'string'}, 'subjects':strings, 'objects':strings, 'attributes':strings,
++        'target_count':{'type':['integer','null'],'minimum':0},
++        'relation':{'type':['string','null']}, 'order':{'type':['integer','null']},
++        'critical':{'type':'boolean'}},
++        'required':['id','type','text','subjects','objects','attributes','target_count','relation','order','critical']}
++    return {'type':'json_schema','json_schema':{'name':'visual_prompt_atoms','strict':True,'schema':{
++        'type':'object','additionalProperties':False,'properties':{
++            'atoms':{'type':'array','items':atom}, 'subject_labels':strings, 'object_labels':strings,
++            'has_people':{'type':'boolean'}, 'has_interaction':{'type':'boolean'}},
++        'required':['atoms','subject_labels','object_labels','has_people','has_interaction']}}}
++
++def validate_parsed(parsed):
++    if not isinstance(parsed,dict) or not isinstance(parsed.get('atoms'),list) or not parsed['atoms']:
++        raise ValueError('parser returned no visual atoms')
++    for index,atom in enumerate(parsed['atoms']):
++        if not isinstance(atom,dict) or atom.get('type') not in ATOM_TYPES:
++            raise ValueError(f'atom {index}: unsupported type; use the specified enum')
++        if not isinstance(atom.get('text'),str) or not atom['text'].strip():
++            raise ValueError(f'atom {index}: missing source text')
++        for name in ('subjects','objects','attributes'):
++            if not isinstance(atom.get(name),list) or not all(isinstance(v,str) for v in atom[name]):
++                raise ValueError(f'atom {index}: {name} must be a string array')
++        target=atom.get('target_count')
++        if atom['type']=='count':
++            if isinstance(target,bool) or not isinstance(target,int) or target<0 or len(atom['subjects'])!=1:
++                raise ValueError(f'atom {index}: count needs one canonical subject and a nonnegative integer target_count')
++        elif target is not None:
++            # Some deployments fill optional numeric fields with 0/1. They
++            # must not invalidate otherwise valid count/spatial atoms or be
++            # interpreted as an invented numerical constraint.
++            atom['target_count'] = None
++        if atom['type']=='spatial' and (len(atom['subjects'])!=2 or not isinstance(atom.get('relation'),str)):
++            raise ValueError(f'atom {index}: spatial needs two canonical subjects and a relation string')
++        # Keep unsupported spatial relations as evidence; the scorer already
++        # skips them. A center/side constraint must not fail all 11 metrics.
++        atom['id'] = f'A{index+1}'
++    for name in ('subject_labels','object_labels'):
++        if not isinstance(parsed.get(name),list) or not all(isinstance(v,str) for v in parsed[name]):
++            raise ValueError(f'{name} must be a string array')
++    return parsed
+ 
+ @lru_cache(maxsize=128)
+ def parse(prompt: str) -> dict:
+-    """Decompose a generation prompt with the only approved general VLM."""
+-    endpoint = os.getenv("QWEN3_VL_ENDPOINT", "http://127.0.0.1:8013/v1")
+-    model = os.getenv("QWEN3_VL_MODEL", MODEL)
++    """Extract typed visual constraints with a schema; never silently discard atoms."""
++    endpoint=os.getenv('QWEN3_VL_ENDPOINT','http://127.0.0.1:8011/v1')
++    model=os.getenv('QWEN3_VL_MODEL',MODEL)
+     if model not in ALLOWED_DEPLOYMENTS:
+-        raise QwenUnavailable(f"refusing non-approved parser model: {model}")
+-    instruction = (
+-        "Decompose the video generation prompt into atomic constraints. Return strict JSON: "
+-        "{atoms:[{id,type,text,subjects,objects,attributes,target_count,relation,order,critical}], "
+-        "subject_labels:[string], object_labels:[string], has_people:boolean, has_interaction:boolean}. "
+-        f"type must be one of {sorted(ATOM_TYPES)}. Preserve explicit negative constraints. Prompt: {prompt}"
+-    )
+-    payload = {"model": model, "temperature": 0, "messages": [{"role": "user", "content": instruction}],
+-               "response_format": {"type": "json_object"}}
+-    request = urllib.request.Request(endpoint.rstrip("/") + "/chat/completions",
+-                                     data=json.dumps(payload).encode(), headers={"Content-Type": "application/json"})
+-    api_key = os.getenv("QWEN3_VL_API_KEY")
+-    if api_key:
+-        request.add_header("Authorization", f"Bearer {api_key}")
+-    last_error: Exception | None = None
+-    for _ in range(2):
++        raise QwenUnavailable(f'refusing non-approved parser model: {model}')
++    instruction='''Decompose this video generation prompt into atomic VISUAL constraints using the exact JSON schema.
++Every atom has exactly one allowed type. Split a clause into several atoms if it constrains several aspects.
++CRITICAL: Every explicit quantity of visible entities MUST get a separate type="count" atom, not only subject or attribute.
++Count: subjects contains EXACTLY ONE canonical detectable noun; target_count is its explicit nonnegative integer count.
++Example: "exactly eight red apples" -> a count atom subjects=["apple"], target_count=8, AND an attribute atom for red.
++Do not invent a count from indefinite articles, timestamps, ages, duration, camera lens mm, or action repetition.
++Outside count atoms target_count MUST be null (never 0 or 1 as a placeholder).
++CRITICAL: Every explicit relative position between visible entities MUST get a separate type="spatial" atom,
++not attribute, subject, spatial_relation or another invented type.
++Spatial: subjects contains EXACTLY TWO canonical detectable nouns in ordered subject/reference order.
++relation is exactly one of left/right/above/below/front/behind.
++Example: "a mug to the right of a laptop" -> subjects=["mug","laptop"], relation="right".
++Use consistent short English singular object labels in all atoms and label lists, suitable for object detection.
++Use "man" rather than a person's proper name such as Zhou Yu. Include count and spatial entities in the label lists.
++Keep text tied to the original constraint. Preserve explicit visual negative constraints; omit audio-only requirements.
++For action sequences keep their temporal order. Do not invent constraints absent from the prompt.
++Prompt:
++'''+prompt
++    schema=response_schema()
++    messages=[{'role':'user','content':instruction}]
++    last_error=None
++    for attempt in range(2):
++        payload={'model':model,'temperature':0,'max_tokens':8192,'messages':messages,'response_format':schema}
++        headers={'Content-Type':'application/json'}
++        if os.getenv('QWEN3_VL_API_KEY'):
++            headers['Authorization']='Bearer '+os.environ['QWEN3_VL_API_KEY']
++        request=urllib.request.Request(endpoint.rstrip('/')+'/chat/completions', data=json.dumps(payload).encode(), headers=headers)
++        body=None
+         try:
+-            with urllib.request.urlopen(request, timeout=300) as response:
+-                body = json.load(response)
+-            last_error = None
+-            break
+-        except TimeoutError as exc:
+-            last_error = exc
+-    if last_error is not None:
+-        raise last_error
+-    parsed = json.loads(body["choices"][0]["message"]["content"])
+-    atoms = []
+-    for atom in parsed.get("atoms", []):
+-        # Audio-only constraints are outside dimensions 1-6.  Qwen sometimes
+-        # emits them despite the closed enum; ignore them instead of failing all
+-        # visual metrics for the video.
+-        if atom.get("type") not in ATOM_TYPES:
+-            continue
+-        index = len(atoms)
+-        atom.setdefault("id", f"A{index + 1}")
+-        atoms.append(atom)
+-    parsed["atoms"] = atoms
+-    parsed.setdefault("subject_labels", [])
+-    parsed.setdefault("object_labels", [])
+-    parsed["parser_model"] = model
+-    return parsed
++            with urllib.request.urlopen(request,timeout=300) as response:
++                body=json.load(response)
++            choice=body['choices'][0]
++            if choice.get('finish_reason')=='length':
++                raise ValueError('parser response was truncated')
++            parsed=validate_parsed(json.loads(choice['message']['content']))
++            parsed['parser_model']=model
++            parsed['parser_schema_version']='typed_visual_atoms_v2'
++            error=None
++        except Exception as exc:
++            last_error=exc
++            error=f'{type(exc).__name__}: {exc}'
++        audit=os.getenv('VIDEO_EVAL_JUDGE_AUDIT_DIR')
++        if audit:
++            directory=Path(audit)
++            directory.mkdir(parents=True,exist_ok=True)
++            (directory/f'prompt_parser_{time.time_ns()}.json').write_text(json.dumps(
++                {'response':body,'validation_error':error,'attempt':attempt+1},ensure_ascii=False,indent=2))
++        if error is None:
++            return parsed
++        messages=[{'role':'user','content':instruction+'\nYour previous extraction failed validation: '+error+'\nReturn the complete corrected extraction using the exact schema.'}]
++    raise QwenUnavailable(f'prompt extraction failed validation: {last_error}')
++
+ 
+ 
+ METRIC_ATOMS = {

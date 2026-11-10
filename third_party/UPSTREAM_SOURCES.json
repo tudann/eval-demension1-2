@@ -1,0 +1,54 @@
+{
+  "format": "vendored source snapshot; runtime assets and nested .git directories excluded",
+  "repositories": [
+    {
+      "path": "third_party/DWPose",
+      "url": "https://github.com/IDEA-Research/DWPose.git",
+      "commit": "3dca5db79d9f9ffdd378753ddf6ec66535aace88",
+      "local_status_at_import": [
+        "M mmpose/projects/yolox_pose/configs/_base_/datasets",
+        " M mmpose/projects/yolox_pose/demo",
+        " M mmpose/projects/yolox_pose/tools",
+        "?? ControlNet-v1-1-nightly/annotator/ckpts/dw-ll_ucoco_384.onnx",
+        "?? ControlNet-v1-1-nightly/annotator/ckpts/yolox_l.onnx"
+      ]
+    },
+    {
+      "path": "third_party/Grounded-SAM-2",
+      "url": "https://github.com/IDEA-Research/Grounded-SAM-2.git",
+      "commit": "b7a9c29f196edff0eb54dbe14588d7ae5e3dde28",
+      "local_status_at_import": [
+        "M grounding_dino/groundingdino/models/GroundingDINO/ms_deform_attn.py"
+      ]
+    },
+    {
+      "path": "third_party/VBench",
+      "url": "https://github.com/Vchitect/VBench.git",
+      "commit": "fd18b3d055cb0fc6f066ca90fe2c3c8cbb698490",
+      "local_status_at_import": [
+        "M VBench-2.0/vbench2/human_clothes.py",
+        " M VBench-2.0/vbench2/human_identity.py",
+        " M VBench-2.0/vbench2/multi_view_consistency.py",
+        " M VBench-2.0/vbench2/third_party/LLaVA_NeXT/llava/model/builder.py",
+        " M VBench-2.0/vbench2/third_party/LLaVA_NeXT/llava/model/multimodal_encoder/builder.py",
+        " M VBench-2.0/vbench2/third_party/LLaVA_NeXT/llava/model/multimodal_encoder/siglip_encoder.py",
+        " M VBench-2.0/vbench2/third_party/ViTDetector/detect.py",
+        " M VBench-2.0/vbench2/third_party/YOLO-World/yolo_world_v2_xl_vlpan_bn_2e-3_100e_4x8gpus_obj365v1_goldg_train_lvis_minival.py"
+      ]
+    },
+    {
+      "path": "third_party/Video-Depth-Anything",
+      "url": "https://github.com/DepthAnything/Video-Depth-Anything.git",
+      "commit": "4f5ae23172ba60fd7bc11ef671cca678842c7072",
+      "local_status_at_import": []
+    },
+    {
+      "path": "third_party/co-tracker",
+      "url": "https://github.com/facebookresearch/co-tracker.git",
+      "commit": "82e02e8029753ad4ef13cf06be7f4fc5facdda4d",
+      "local_status_at_import": [
+        "M cotracker/models/core/cotracker/cotracker.py"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "atoms": [
+    {
+      "id": "1",
+      "type": "scene",
+      "text": "Live-action, realistic style, a fixed eye-level medium shot with waist-up framing holds on a home study at night.",
+      "subjects": [],
+      "objects": [],
+      "attributes": [
+        "live-action",
+        "realistic",
+        "eye-level",
+        "medium shot",
+        "waist-up",
+        "static",
+        "night"
+      ],
+      "target_count": 1,
+      "relation": "background",
+      "order": 1,
+      "critical": true
+    },
+    {
+      "id": "6",
+      "type": "subject",
+      "text": "Zhou Yu, an adult man, sits facing the camera in a simple chair.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "chair"
+      ],
+      "attributes": [
+        "adult man",
+        "facing camera",
+        "simple chair"
+      ],
+      "target_count": 1,
+      "relation": "sitting",
+      "order": 6,
+      "critical": true
+    },
+    {
+      "id": "8",
+      "type": "attribute",
+      "text": "The upper region of the bookshelf is half-dark with shelf boards and muted book-spine color bands just discernible.",
+      "subjects": [
+        "bookshelf"
+      ],
+      "objects": [],
+      "attributes": [
+        "half-dark",
+        "shelf boards discernible",
+        "muted book-spine color bands"
+      ],
+      "target_count": 1,
+      "relation": "visual state",
+      "order": 8,
+      "critical": true
+    },
+    {
+      "id": "10",
+      "type": "attribute",
+      "text": "The camera never pans toward the window and no street detail is visible.",
+      "subjects": [
+        "camera"
+      ],
+      "objects": [
+        "window"
+      ],
+      "attributes": [
+        "never pans",
+        "no street detail visible"
+      ],
+      "target_count": 1,
+      "relation": "camera constraint",
+      "order": 10,
+      "critical": true
+    },
+    {
+      "id": "11",
+      "type": "camera",
+      "text": "The camera holds a static shot, steady.",
+      "subjects": [
+        "camera"
+      ],
+      "objects": [],
+      "attributes": [
+        "static",
+        "steady"
+      ],
+      "target_count": 1,
+      "relation": "camera behavior",
+      "order": 11,
+      "critical": true
+    },
+    {
+      "id": "12",
+      "type": "attribute",
+      "text": "The lamp's warm key light from frame-left and the laptop's cool screen glow lay a warm-cool contrast across Zhou Yu's face.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "lamp",
+        "laptop"
+      ],
+      "attributes": [
+        "warm key light",
+        "cool screen glow",
+        "warm-cool contrast"
+      ],
+      "target_count": 1,
+      "relation": "lighting",
+      "order": 12,
+      "critical": true
+    },
+    {
+      "id": "13",
+      "type": "action",
+      "text": "Zhou Yu's eyes flick toward the mug with a small blink.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "mug"
+      ],
+      "attributes": [
+        "eyes flick",
+        "small blink"
+      ],
+      "target_count": 1,
+      "relation": "action",
+      "order": 13,
+      "critical": true
+    },
+    {
+      "id": "14",
+      "type": "action",
+      "text": "His right hand closes around the rim, lifts it in a smooth arc, tilts for one slow sip with subtle throat and jaw movement, then sets it back exactly in its original spot with a soft ceramic tap.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "mug"
+      ],
+      "attributes": [
+        "right hand",
+        "closes around rim",
+        "lifts in smooth arc",
+        "tilts for slow sip",
+        "subtle throat and jaw movement",
+        "sets back",
+        "soft ceramic tap"
+      ],
+      "target_count": 1,
+      "relation": "action sequence",
+      "order": 14,
+      "critical": true
+    },
+    {
+      "id": "15",
+      "type": "action",
+      "text": "As he lowers the mug, Zhou Yu murmurs with a mid-register, slightly hoarse, slow-paced Mandarin voice (S1) in clear lip sync: <d>[Chinese]我记得就夹在这本里。</d>",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "mug"
+      ],
+      "attributes": [
+        "mid-register",
+        "slightly hoarse",
+        "slow-paced",
+        "Mandarin",
+        "lip sync",
+        "speech content"
+      ],
+      "target_count": 1,
+      "relation": "speech action",
+      "order": 15,
+      "critical": true
+    },
+    {
+      "id": "16",
+      "type": "action",
+      "text": "At 00:02.000, he plants his left hand on the desk edge and pushes back; the chair slides rearward with a soft friction scrape as he rises and turns right toward the bookshelf.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "desk",
+        "chair",
+        "bookshelf"
+      ],
+      "attributes": [
+        "left hand on desk edge",
+        "pushes back",
+        "chair slides rearward",
+        "soft friction scrape",
+        "rises",
+        "turns right"
+      ],
+      "target_count": 1,
+      "relation": "action sequence",
+      "order": 16,
+      "critical": true
+    },
+    {
+      "id": "17",
+      "type": "action",
+      "text": "His shoulder briefly occludes part of the bookshelf.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "bookshelf"
+      ],
+      "attributes": [
+        "shoulder occludes part"
+      ],
+      "target_count": 1,
+      "relation": "spatial interaction",
+      "order": 17,
+      "critical": true
+    },
+    {
+      "id": "18",
+      "type": "action",
+      "text": "In the half-lit zone his fingers slide along the second tier's spines with a dry paper whisper, pinch one spine, and draw out a solid matte blue-covered book with no readable text.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "bookshelf",
+        "book"
+      ],
+      "attributes": [
+        "fingers slide",
+        "dry paper whisper",
+        "pinch spine",
+        "draw out",
+        "solid matte blue cover",
+        "no readable text"
+      ],
+      "target_count": 1,
+      "relation": "action sequence",
+      "order": 18,
+      "critical": true
+    },
+    {
+      "id": "19",
+      "type": "action",
+      "text": "He flips it open with his thumb; a crisp paper-page rustle sounds as a yellow sticky note slips free from between the pages, and he catches it between thumb and forefinger, its blank yellow surface catching a sliver of the lamp's warm light.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "book",
+        "sticky note"
+      ],
+      "attributes": [
+        "flips open with thumb",
+        "crisp paper-page rustle",
+        "yellow sticky note slips free",
+        "catches between thumb and forefinger",
+        "blank yellow surface",
+        "catches lamp light"
+      ],
+      "target_count": 1,
+      "relation": "action sequence",
+      "order": 19,
+      "critical": true
+    },
+    {
+      "id": "20",
+      "type": "action",
+      "text": "At 00:05.000, he turns back left, steps in, and sits down, the chair easing forward with another light scrape as it tucks under the desk.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "chair",
+        "desk"
+      ],
+      "attributes": [
+        "turns back left",
+        "steps in",
+        "sits down",
+        "chair eases forward",
+        "light scrape",
+        "tucks under desk"
+      ],
+      "target_count": 1,
+      "relation": "action sequence",
+      "order": 20,
+      "critical": true
+    },
+    {
+      "id": "21",
+      "type": "action",
+      "text": "He leans in and presses the yellow note onto the upper-left corner of the laptop screen with a gentle fingertip press, the note seating flat with a faint tacky sound.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "sticky note",
+        "laptop"
+      ],
+      "attributes": [
+        "leans in",
+        "presses note",
+        "upper-left corner",
+        "gentle fingertip press",
+        "faint tacky sound"
+      ],
+      "target_count": 1,
+      "relation": "action",
+      "order": 21,
+      "critical": true
+    },
+    {
+      "id": "22",
+      "type": "action",
+      "text": "Then lays the blue book flat on the desk's upper-right area with a soft paper thump.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "book",
+        "desk"
+      ],
+      "attributes": [
+        "lays flat",
+        "desk's upper-right area",
+        "soft paper thump"
+      ],
+      "target_count": 1,
+      "relation": "action",
+      "order": 22,
+      "critical": true
+    },
+    {
+      "id": "23",
+      "type": "action",
+      "text": "His gaze settles on the screen, which displays only a blurred document interface with no readable characters, his eyes making small attention-driven movements and one natural blink.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "laptop screen"
+      ],
+      "attributes": [
+        "gaze settles",
+        "blurred document interface",
+        "no readable characters",
+        "small attention-driven movements",
+        "one natural blink"
+      ],
+      "target_count": 1,
+      "relation": "visual focus",
+      "order": 23,
+      "critical": true
+    },
+    {
+      "id": "24",
+      "type": "scene",
+      "text": "The final frame confirms the closing state: Zhou Yu seated at the desk, the lamp still on the desktop's left, the mug still to the laptop's right, the yellow note stuck to the screen's upper-left corner, and the blue book lying flat at the desktop's upper right.",
+      "subjects": [
+        "Zhou Yu"
+      ],
+      "objects": [
+        "desk",
+        "lamp",
+        "mug",
+        "laptop",
+        "sticky note",
+        "book"
+      ],
+      "attributes": [
+        "seated at desk",
+        "lamp on left",
+        "mug to laptop's right",
+        "note on screen upper-left",
+        "book on desk upper-right"
+      ],
+      "target_count": 1,
+      "relation": "final state",
+      "order": 24,
+      "critical": true
+    },
+    {
+      "id": "25",
+      "type": "negative",
+      "text": "No music, no subtitles, no second person or pet appears at any point.",
+      "subjects": [],
+      "objects": [],
+      "attributes": [
+        "no music",
+        "no subtitles",
+        "no second person",
+        "no pet"
+      ],
+      "target_count": 0,
+      "relation": "exclusion",
+      "order": 25,
+      "critical": true
+    }
+  ],
+  "subject_labels": [
+    "Zhou Yu"
+  ],
+  "object_labels": [
+    "desk",
+    "desk lamp",
+    "laptop",
+    "mug",
+    "chair",
+    "bookshelf",
+    "window",
+    "book",
+    "sticky note"
+  ],
+  "has_people": true,
+  "has_interaction": true,
+  "parser_model": "Qwen3-VL-32B-Instruct"
+}
