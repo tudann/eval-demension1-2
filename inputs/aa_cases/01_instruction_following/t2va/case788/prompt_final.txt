@@ -1,0 +1,4 @@
+Five cartoon-style robot arms stand in a row on a factory app onboarding screen, in teal and safety orange. One arm is in the centre, and two arms stand on each side of it.
+First, the centre arm lifts a glowing cube up above itself. The four other arms do not move yet.
+Only after the cube is up, the four side arms turn their camera heads toward the centre arm, one by one, not all at once. They keep facing the cube.
+Then a "GOOD PICK" banner pops onto the screen, and all five arms bounce.

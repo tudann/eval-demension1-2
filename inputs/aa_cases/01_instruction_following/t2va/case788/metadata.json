@@ -1,0 +1,17 @@
+{
+  "case_id": "case788",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Five cartoon-style robot arms stand in a row on a factory app onboarding screen, in teal and safety orange. One arm is in the centre, and two arms stand on each side of it.\nFirst, the centre arm lifts a glowing cube up above itself. The four other arms do not move yet.\nOnly after the cube is up, the four side arms turn their camera heads toward the centre arm, one by one, not all at once. They keep facing the cube.\nThen a \"GOOD PICK\" banner pops onto the screen, and all five arms bounce.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 154,
+  "scene": "UIUX & Motion Design",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

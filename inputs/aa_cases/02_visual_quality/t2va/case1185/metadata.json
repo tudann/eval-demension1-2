@@ -1,0 +1,17 @@
+{
+  "case_id": "case1185",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Casual handheld phone clip filmed from under a covered porch during heavy rain at dusk. Everything is a flat blue-grey with no shadows anywhere.\nThe frame shows a wet concrete driveway with standing puddles. A garden gate is on the left and a parked silver hatchback car is on the right. Rain hammers the puddles the whole time.\nA moment after the shot starts, a woman in her thirties in a soaked yellow raincoat runs into frame from the gate. She sprints across the driveway toward the hatchback, splashing hard through the puddles.\nThe camera loosely swings to follow her. One continuous take, no cuts.\nWhen she is halfway across, a single small motion-sensor floodlight, mounted high on the garage wall, snaps on. It goes from off to full brightness instantly.\nThe moment it turns on, she casts exactly one hard shadow with sharp edges, and the shadow races across the wet concrete as she runs. Individual rain streaks light up inside the beam of the floodlight.\nThe floodlight is the only new light in the scene, and nothing else in the shot gets brighter.\nPhotorealistic, exactly like real caught-on-phone footage.\nNo lightning, no slow fade-up of the light, no second shadow from anywhere.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 78,
+  "scene": "Consumer",
+  "aa_ability": "Lighting & Materials",
+  "ability_evaluation_criteria": "Lighting and material seem realistic and behaves as prompted",
+  "media_status": "missing_video"
+}

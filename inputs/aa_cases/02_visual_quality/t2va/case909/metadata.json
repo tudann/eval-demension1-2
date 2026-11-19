@@ -1,0 +1,17 @@
+{
+  "case_id": "case909",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Casual handheld phone video on an empty painted basketball court under flat overcast daylight, loose framing, a seller demonstrating a red-framed 20-inch unicycle with a black saddle for a marketplace listing.\nThe frame starts close on her hands at the seat post.\nA woman in her 20s, wearing denim shorts, high-top sneakers and knee pads, opens the silver quick-release lever with her thumb, all five fingers distinct around the clamp.\nShe slides the saddle up a few centimetres and snaps the lever shut with a firm press of her palm.\nThe camera steps back and widens as she holds the saddle steady between her legs.\nShe plants her right foot on the lower pedal and steps up in one strong push, sitting down on the saddle.\nBoth feet land on the pedals, her arms fling wide for balance, and she wobbles once before settling.\nShe pedals forward across the court. The pedals and the single wheel turn together as one unit. She rides toward the camera and past it.\nShe rolls out of frame still upright, seated on the saddle the whole way, both feet on the pedals.\nThe unicycle keeps one wheel and no handlebars from first frame to last.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "AA_T2V_159_audit_20261111.xlsx",
+  "excel_row": 123,
+  "scene": "Retail & Ecommerce",
+  "aa_ability": "Human Anatomy",
+  "ability_evaluation_criteria": "Humans look realistic and natural, never uncanny",
+  "media_status": "missing_video"
+}

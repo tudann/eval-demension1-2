@@ -1,0 +1,17 @@
+{
+  "case_id": "case674",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "One continuous cinematic shot inside a deep snowy pine forest at dusk under flat grey light, very realistic film look, natural skin texture with wind-chapped cheeks, frost, pores and small blemishes, no smooth plastic or CGI-looking skin. Freezing air with drifting ice crystals, snow sliding off loaded branches, visible breath, and strong wind moving through huge trunks. The camera races fast through the forest, weaving hard between trunks and low branches in one unbroken move, with real motion blur and deep focus. The camera bursts into a small clearing where a fur-clad forester stands on a fallen log, lit by cold blue off the snow and the low orange of a storm lantern on her belt. She looks rough and real: raw cheeks, frost on her lashes and on the wolf-fur collar, carved bone fasteners and layered hide straps shifting in the wind. She lifts the lantern off her belt and holds it up at head height, the warm light climbing her face from below, and stares hard at something large moving in the treeline.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 4,
+  "scene": "Live-Action Film",
+  "aa_ability": "Lighting & Materials",
+  "ability_evaluation_criteria": "Lighting and material seem realistic and behaves as prompted",
+  "media_status": "missing_video"
+}

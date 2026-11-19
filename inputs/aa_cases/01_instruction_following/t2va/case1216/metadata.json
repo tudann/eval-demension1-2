@@ -1,0 +1,17 @@
+{
+  "case_id": "case1216",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Ordinary daytime phone video at a farm-park fence, bright overcast daylight, handheld from a few metres back, framed wide enough to keep all five adult visitors and the ostrich in frame the whole time, single take.\n0-2s: Five adult visitors stand in a row at the fence. An ostrich leans its long neck over the rail toward the tallest man, who wears a straw hat.\n2-4s: The ostrich snatches the straw hat off his head and jerks its neck back. The camera jolts a little, as if the person filming is startled.\n4-7s: The other four visitors all turn their heads toward the man who lost his hat. They laugh and point at him. He claps a hand on top of his bare head.\n7-10s: He lunges toward the hat. The ostrich backs away, holding the hat in its beak. All five visitors turn their heads and follow the ostrich and the hat with their eyes as it moves away.\nNobody looks at the camera.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 74,
+  "scene": "Consumer",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

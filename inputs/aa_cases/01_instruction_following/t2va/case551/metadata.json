@@ -1,0 +1,17 @@
+{
+  "case_id": "case551",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "0-2s: Flat cartoon animation in an isometric view on clean solid colour fields, looking down over a brown construction yard drawn with simple geometric shapes: a red crawler crane on its tracked base holds a grey concrete pipe section hanging in the air at the left edge of the frame, while a yellow dump truck enters at the far right.\n2-6s: The crane turns steadily, swinging the hanging pipe from screen left to screen right high across the yard, while the truck drives from right to left underneath the pipe's path; the pipe crosses well above the truck's roof in the middle of the frame and never touches the truck.\n6-9s: The pipe keeps travelling until it hangs over the right side of the yard; the truck keeps driving and exits the frame on the left.\n9-10s: Hold on the swapped positions, the pipe now on the right and the truck gone out the left; shapes slide smoothly, flat solid colours, no gradients or shading; one continuous take, no cuts, no other vehicle or crane in frame.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 55,
+  "scene": "Animation & Gaming",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

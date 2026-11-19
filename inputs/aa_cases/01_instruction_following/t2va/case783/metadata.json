@@ -1,0 +1,17 @@
+{
+  "case_id": "case783",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Toy-plastic 3D render with glossy candy-like materials, bouncy cartoon mascot animation where shapes squash and stretch, on a pale studio set. The camera holds one wide framing so the whole flight stays in the shot.\n0-2s: A glossy teal hard-shell suitcase stands in the centre of a floor painted with runway stripes. Above it floats the logo text \"ROAMLY\".\n2-4s: Four clear dragonfly wings with visible veins unfold from the side panels of the suitcase, two on each side. At the same time, a fan of green-and-gold peacock tail feathers spreads open from the back panel of the suitcase.\n4-7s: The suitcase lifts off the floor. The clear insect wings beat so fast they blur. The peacock feather fan stays spread wide at its back. The wheels tuck up like airplane landing gear. The suitcase flies one clean loop around the floating logo.\n7-10s: It lands on a giant boarding-pass card and rolls to a full stop. The insect wings fold flat and the feather fan closes. The tagline \"Pack light, go far.\" slides in below it.\nFor the whole flight, the wings on its sides stay clear insect wings and the fan at its back stays peacock feathers. They never turn into bird wings.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 153,
+  "scene": "Marketing & Advertising",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

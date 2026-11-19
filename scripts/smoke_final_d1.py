@@ -28,7 +28,7 @@ for row in rows:
     print(f'SMOKE_START D{d}', flush=True)
     with (RUN/f'D{d}.log').open('w') as log:
         process = subprocess.run(command, env=env, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, timeout=7200)
-    report_path = out/(Path(row['video_path']).stem+'.json')
+    report_path = out/'runs'/'local'/'01_instruction_following'/'direct'/Path(row['video_path']).stem/'result.json'
     report = json.loads(report_path.read_text()) if report_path.is_file() else None
     bad = [m for m in report['metrics'] if m['status'] in ('ERROR','MODEL_UNAVAILABLE') or m.get('error')] if report else ['no report']
     item = {'dimension':d, 'returncode':process.returncode, 'elapsed_seconds':round(time.time()-started, 2),

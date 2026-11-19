@@ -1,0 +1,17 @@
+{
+  "case_id": "case819",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "A recycling yard sits in near darkness. A yellow dump truck is backed onto a bare concrete pad, its outline barely visible in the dark.\nThe truck bed begins to tilt up. The first pieces of broken glass slide off the back edge of the bed, catching faint glints of light.\nThe first bank of overhead lights snaps on. One hard pool of light lands on the pad.\nThe pour grows into a full avalanche of broken glass. The hard, see-through pieces tumble down, bounce off the concrete, and pile up into a heap.\nThe second bank of lights switches on. Half the yard jumps one clear step brighter, and glints multiply across the falling glass.\nThe camera pushes in slowly and low from the side of the pad, keeping the raised truck bed and the growing heap together in frame.\nThe third bank of lights comes on. Now the whole scene is bright and evenly lit, and every glass edge glitters.\nThe truck bed reaches full tilt, and the last of the glass slides down the steel.\nThe heap settles. The pieces still shift and sparkle under the flat bright light of all three banks.\nPhotorealistic night exterior, faceless satisfying industry reel, no people anywhere near the pour, no on-screen text.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 135,
+  "scene": "Social Media & Creator Content",
+  "aa_ability": "Lighting & Materials",
+  "ability_evaluation_criteria": "Lighting and material seem realistic and behaves as prompted",
+  "media_status": "missing_video"
+}

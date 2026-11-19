@@ -1,0 +1,17 @@
+{
+  "case_id": "case1014",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "[Style] Puppet stop-motion claymation with visible frame-to-frame jitter, tiny fingerprints in the clay, steam made of cotton wool, a warm lantern-lit forest made of felt and clay at dusk.\n\n[Subject] Under a stone bridge, a clay troll as big as a house, with mossy shoulders and a kind lumpy face, crouches over a tiny camp stove. Below the troll stands a small clay hiker in a yellow raincoat, looking up.\n\n[Visual] The troll fills one single red enamel mug from a battered kettle. Cotton-wool steam curls off the top of the mug. The troll's enormous three-knuckled hand lowers the mug down toward the hiker. The camera pushes in slowly from a wide shot of both characters to a tight frame on the handover. The hiker reaches up and closes both small hands around the mug. Only after both of the hiker's hands are holding the mug do the troll's thick fingers open and lift away. The hiker holds the steaming mug against the yellow raincoat. The camera eases back out to a wide shot. The troll pats the bridge stones, and a carved wooden sign swings down into frame. The sign reads \"TROLLBREW COFFEE\" in chunky carved letters, held steady and easy to read.\n\n[Sounds] A deep friendly rumble from the troll, the kettle glugging as it pours, a small clink as the mug changes hands, gentle forest sounds.\n\n[Avoid] No second mug appears. No duplicated hands. No clay finger merges into the mug or into the hiker. The mug keeps the same size and red colour through the whole handover. No subtitles.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "AA_T2V_159_audit_20261111.xlsx",
+  "excel_row": 56,
+  "scene": "Animation & Gaming",
+  "aa_ability": "Human Anatomy",
+  "ability_evaluation_criteria": "Humans look realistic and natural, never uncanny",
+  "media_status": "missing_video"
+}

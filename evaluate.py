@@ -14,7 +14,7 @@ def parser() -> argparse.ArgumentParser:
     value.add_argument("--reference", action="append", default=[])
     value.add_argument("--metric", action="append", dest="metrics")
     value.add_argument("--dimension", action="append", type=int, dest="dimensions", choices=(1, 2))
-    value.add_argument("--output-dir", default="reports")
+    value.add_argument("--output-dir", default="outputs/d1_d2")
     value.add_argument("--sample-fps", type=float, default=2.0)
     value.add_argument("--max-frames", type=int, default=48)
     return value

@@ -1,0 +1,17 @@
+{
+  "case_id": "case1402",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "A traffic intersection filmed at the exact same time each day for a month. Patterns emerge. The same yellow car appears every Tuesday and Thursday. A crossing guard's routine never varies. Weather changes but rhythms stay constant. One day, everything is different—a parade comes through. The next day, normal patterns resume as if nothing happened. Audio: Identical traffic rhythms, parade intrusion, return to normal.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 45,
+  "scene": "Live-Action Film",
+  "aa_ability": "Multi-Scene & Narrative",
+  "ability_evaluation_criteria": "Shots follows direction, tells coherent story",
+  "media_status": "missing_video"
+}

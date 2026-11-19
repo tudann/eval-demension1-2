@@ -1,0 +1,13 @@
+A minimalist flat-design fleet-tracking dashboard fills the frame: a pale grey city map seen from directly above, one thin horizontal route line, and simple two-colour vehicle icons with soft shadows.
+Two icons travel from left to right along the route line: a green garbage truck icon and a white delivery van icon. The truck is clearly behind the van, with a visible gap between them.
+A rounded tag reading "NEXT STOP" is attached to the van.
+The truck speeds up. The gap between the truck and the van shrinks.
+The truck draws level with the van. For a moment the two icons move side by side on parallel lanes.
+The truck moves ahead of the van. Now the truck is in front and the van is behind, with a growing gap between them.
+The instant the truck is fully in front, the "NEXT STOP" tag pops off the van and snaps onto the truck. The tag stretches slightly past its spot, then settles into place on the truck.
+The truck reaches a depot marker at the right edge of the map first and stops.
+The van pulls in and stops behind the truck.
+The part of the route line behind both vehicles turns green.
+The camera slides gently to the right the whole time, keeping both icons in frame through the entire overtake.
+The van never passes the truck again. The icons never swap colours or shapes. The tag is never on both vehicles at the same time.
+Smooth, eased motion, calm and unhurried, one continuous take.

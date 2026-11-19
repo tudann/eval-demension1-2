@@ -1,0 +1,13 @@
+{
+  "case_id": "010903",
+  "dimension": 1,
+  "mode": "r2va",
+  "model": "seedance-2-0-mini",
+  "task_type": "ref2v",
+  "original_prompt": "缓慢推镜 + 轻微环绕\n大师影视运镜，9 秒，镜头从画面右侧古松与红灯笼处缓慢向前推，同时极轻柔向左环绕平移，焦点从近景虬曲古松缓缓过渡至中景临水古镇街巷，再慢慢望向云海深处层叠的浮空宝塔；运镜丝滑匀速，低阻尼，无急促晃动，景深缓慢变化，柔和晨雾随镜头流动，氛围感静谧悠远，电影级宽画幅，光影跟随镜头缓慢扫过白墙飞檐，节奏舒缓大气。",
+  "sha256": "fa6fdad2a8c5b30584422f36187d00cd4c10695cd86d2a79dadf3d3bd1925ec5",
+  "source_video_path": "/pfs/pfs-spMCeu/eval_team/Video-eval/SHJ/10.29_20维度回归视频_按模型和维度/01_指令理解与遵循/seedance-2-0-mini/010903.mp4",
+  "source_reference_images": [
+    "/pfs/pfs-spMCeu/eval_team/Video-eval/SHJ/10.29_20维度回归视频_按模型和维度/01_指令理解与遵循/生成素材与Prompt/010903/输入素材/01_reference_JTICbiO3NoLEc2xfH2TcmtK9n6g.png"
+  ]
+}

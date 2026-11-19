@@ -1,0 +1,17 @@
+{
+  "case_id": "case1204",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "[Style] Casual phone clip filmed by a friend standing at the edge of an ice rink, photorealistic, cold flat fluorescent light, other skaters soft and blurry in the background of a worn public rink.\n[Subject] An ice dancer in her twenties, wearing black leggings and a grey fleece jacket, glides across the ice. She sinks into a deep lunge on one skate: her front knee bends deep over that skate, and her back leg stretches straight out behind her, with the back skate blade still touching the ice. She pushes up with one strong, visible push and stands again, then glides toward the barrier at the edge of the rink. Her friend, wearing a knitted beanie hat, leans over the barrier and holds out a steel thermos. The dancer takes hold of the thermos while her friend is still holding it, so for a clear moment both of their hands are on the thermos at the same time. Then the friend lets go. The dancer pushes off, skates away from the barrier, and raises the thermos in a small toast.\n[Visual] The phone is held just above the barrier and turns smoothly to follow her glide. It is close enough that the handover fills the middle of the frame. One continuous take that ends on her pushing off with the thermos raised.\n[Sounds] Skate blades scraping the ice, general rink chatter, tinny pop music from far-away speakers.\n[Avoid] Her skates never float above the ice or sink into it. The thermos never jumps between hands or blends into fingers. No subtitles.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "AA_T2V_159_audit_20261111.xlsx",
+  "excel_row": 76,
+  "scene": "Consumer",
+  "aa_ability": "Human Anatomy",
+  "ability_evaluation_criteria": "Humans look realistic and natural, never uncanny",
+  "media_status": "missing_video"
+}

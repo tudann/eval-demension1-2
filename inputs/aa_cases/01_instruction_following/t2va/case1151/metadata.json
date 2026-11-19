@@ -1,0 +1,17 @@
+{
+  "case_id": "case1151",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Photoreal 35mm film, soft grain, pale misty light.\nThis video has three shots, with a cut between each shot.\nShot 1: close up on an elderly monk. His weathered face and folded hands fill the frame. He wears orange-brown robes. He is completely still. Cut.\nShot 2: wide shot. He sits on top of a narrow, hundred-foot tall stone pillar. Mist fills the valley below him. He is small in the frame. Cut.\nShot 3: worm's eye view from the base of the stone pillar, looking steeply up at him.\nHe rises slowly off the rock and floats in the air. His robes whip in the wind. He never touches the stone again.\nThe last second holds on him floating.\nSounds: wind blowing across the stone, his robes snapping in the gusts.\nNo wires, no ropes.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 89,
+  "scene": "Frontier",
+  "aa_ability": "Multi-Scene & Narrative",
+  "ability_evaluation_criteria": "Shots follows direction, tells coherent story",
+  "media_status": "missing_video"
+}

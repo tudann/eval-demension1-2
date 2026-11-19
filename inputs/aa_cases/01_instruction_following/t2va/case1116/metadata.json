@@ -1,0 +1,17 @@
+{
+  "case_id": "case1116",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "[Style] Photoreal cinematic footage with a wide widescreen movie look, black bars at the top and bottom of the frame, horizontal lens flares streaking off sea spray and wet stone, rain visibly falling in the plaza shot.\n\n[Subject] An orca jumps fully out of a grey open sea, its body arching high in the air. The camera rises low over the water together with the orca. At the exact highest point of the jump, a match cut lands on a granite statue of an orca. The statue holds the identical arched pose, at the identical position in the frame, as the airborne orca did. The statue stands in a rain-soaked harbour plaza, and a flock of pigeons bursts up into the air around it. The same rising camera motion carries straight through the cut and keeps moving around the statue. Then a cross-dissolve returns to the ocean: the same orca, still in the air, crashes down into the sea in an exploding sheet of white water, shown in a steadier wide view.\n\n[Sounds] Sea spray and gulls during the jump; drumming rain and a burst of pigeon wings in the plaza; a deep, booming splash when the orca hits the water.\n\n[Avoid] The cut never happens before the highest point of the jump. No second orca. The statue never moves or comes alive. No subtitles.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 88,
+  "scene": "Frontier",
+  "aa_ability": "Multi-Scene & Narrative",
+  "ability_evaluation_criteria": "Shots follows direction, tells coherent story",
+  "media_status": "missing_video"
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "case907",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Casual handheld phone video, camera low at floor level, warm afternoon light in a living room. An owner tips a cardboard box on its side. A blue crinkle play tunnel slides out of the box and unrolls across the rug. The far end of the tunnel stops next to a white treat cup that stands upright on the rug. A sandy-coloured ferret dives into the near end of the tunnel. Its claws scratch as it runs, and the tunnel rustles and bulges as the ferret moves through it. The camera follows low along the tunnel. The ferret bursts out of the far end of the tunnel. As it comes out, it bumps the white cup, and the cup falls onto its side with a clatter. The video ends on the tipped-over cup with the ferret beside it.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 14,
+  "scene": "Retail & Ecommerce",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

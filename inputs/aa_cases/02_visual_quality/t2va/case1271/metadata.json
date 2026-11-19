@@ -1,0 +1,17 @@
+{
+  "case_id": "case1271",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Photorealistic film of a street at dusk for a real estate listing in a renovated depot district, one continuous take. The road is wet from rain under a deep blue evening sky. Every streetlight down the block is completely dark.\nThe camera holds a wide street-level view of the converted brick depot building, with its tall arched windows and loading bay clearly visible. The wet street reflects only the blue of the sky.\nA box truck drives into frame and stops at the curb outside the depot.\nThe nearest streetlight brightens from fully dark to a full warm orange glow. Only after that lamp is fully lit does its orange pool of reflected light appear on the wet road beneath it.\nThe driver, wearing a bright yellow safety vest, swings the cab door open and steps down onto the wet street.\nThe second streetlight, farther down the block, brightens from dark to fully lit. Its reflection appears on the wet road only after that lamp reaches full brightness.\nThe camera drifts slowly forward past the parked truck toward the loading bay.\nThe driver grips the metal roller door and pulls it up in one big pull. The door slats climb fast.\nThen the third streetlight turns on, and after it the fourth, each one brightening on its own from dark to full. Each lamp's pool of reflected light appears on the wet street only after that lamp is fully burning.\nThe sky stays the same deep blue the whole time, and no lamp ever dims back down.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 67,
+  "scene": "Architecture & Real Estate",
+  "aa_ability": "Lighting & Materials",
+  "ability_evaluation_criteria": "Lighting and material seem realistic and behaves as prompted",
+  "media_status": "missing_video"
+}

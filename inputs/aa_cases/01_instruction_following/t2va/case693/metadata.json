@@ -1,0 +1,17 @@
+{
+  "case_id": "case693",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Virtual staging concept, photorealistic 8K, ultra-crisp interior design, highly kinetic visual presentation. A cozy mountain cabin reading nook magically assembling itself through dynamic visual effects. 0-3s: A wide, static shot of a bare timber-framed attic loft with rough plank floors, exposed log beams, and a large round window overlooking snowy pine forest at dusk. 3-7s: Cut to a low-angle shot by the window. In one burst of motion, a cream chunky knit wool rug unfurls across the planks in front of the window, an oxblood leather armchair slides into place on the left side of the cast-iron wood stove, and a tall oak bookshelf rises up against the wall right of the window, filling all three of its shelves with books. 7-10s: Cut to a slow push-in shot of the now fully furnished nook. A red-and-black plaid blanket drapes itself over the armchair's left armrest, flames flicker to life in the stove, and warm Edison bulbs glow on across the beams, the nook complete.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 19,
+  "scene": "Architecture & Real Estate",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

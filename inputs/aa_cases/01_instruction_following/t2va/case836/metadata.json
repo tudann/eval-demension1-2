@@ -1,0 +1,17 @@
+{
+  "case_id": "case836",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Aerial travel-reel footage, late golden light, long shadows across a sandstone plateau. One continuous take, with the camera flying alongside at the height of the plateau rim, keeping both paragliders in frame the whole time.\nA red paraglider flies behind a yellow paraglider, low along the edge of the plateau.\nThe red paraglider climbs and closes the gap on the yellow one.\nThe red paraglider draws level with the yellow one. At that moment the video briefly goes into slow motion, then snaps back to normal speed.\nThe red paraglider pulls clearly ahead of the yellow one as both turn out over the cliff drop.\nSound: rushing wind and the flutter of the canopy fabric.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 132,
+  "scene": "Social Media & Creator Content",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

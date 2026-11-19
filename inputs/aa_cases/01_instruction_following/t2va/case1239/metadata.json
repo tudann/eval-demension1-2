@@ -1,0 +1,17 @@
+{
+  "case_id": "case1239",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Very clean commercial restaurant film, bright daylight.\nThe whole video is only two shots, joined by one hard cut.\nShot 1: a chef in a stainless-steel open kitchen lifts a round tempura basket out of bubbling oil. The camera rises with the basket until the circle of the basket fills the frame.\nOne hard match cut: the circle of the basket becomes the circle of a round skylight in the dining room ceiling, seen from directly below. The circle stays at the same size and in the same position in the frame across the cut.\nShot 2: the camera drops down and pulls back over long oak tables toward the open kitchen at the far end of the dining room.\nNo dissolve, no third shot.\nSound: the sizzle of the fryer, then soft dining-room background sound.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 68,
+  "scene": "Architecture & Real Estate",
+  "aa_ability": "Multi-Scene & Narrative",
+  "ability_evaluation_criteria": "Shots follows direction, tells coherent story",
+  "media_status": "missing_video"
+}

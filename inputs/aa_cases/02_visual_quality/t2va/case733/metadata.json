@@ -1,0 +1,17 @@
+{
+  "case_id": "case733",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "[Style] Photorealistic sports title sequence at night: large motion-graphics words placed inside a real night scene, deep blacks, all drama from one single light source.\n[Subject] A tall triple jumper in a matte dark grey outfit with one white stripe sprints down a dark runway at night. There is only one light in the whole scene: a hard light sitting low at ground level, far off at the right side of the frame. It draws a thin white-gold line of light along the edge of her body, and everything behind her stays pure black. The camera tracks alongside her at ground level, keeping her pace. At the exact moment her foot hits the ground for the hop, the giant word \"HOP\" slams into the frame. The same light from the right catches the right edge of the word, and its left face stays dark. At the exact moment her foot hits the ground for the step, the word \"STEP\" lands lower in the frame, lit the same way. At the exact moment her foot pushes off for the jump, the word \"JUMP\" curves through the air with her flight. She lands in the sand pit and disappears from view, and a spray of sand grains flashes white as it passes through the light beam.\n[Text] \"HOP\", then \"STEP\", then \"JUMP\". Each word appears exactly at the moment the matching foot hits the ground. All three words are lit only from screen right along their edges, and their left faces stay dark.\n[Sounds] Spiked shoes hitting the runway, one sharp breath, the thump of the sand landing, a distant crowd growing louder.\n[Avoid] No stadium floodlights, no light from above, no light from any second direction, no soft ambient light brightening the blacks, no subtitles.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 145,
+  "scene": "UIUX & Motion Design",
+  "aa_ability": "Lighting & Materials",
+  "ability_evaluation_criteria": "Lighting and material seem realistic and behaves as prompted",
+  "media_status": "missing_video"
+}

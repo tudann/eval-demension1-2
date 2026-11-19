@@ -1,0 +1,17 @@
+{
+  "case_id": "case589",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "0-2s: Fade up from black on a candlelit stone workbench in 90s anime style, with a hand-painted background and warm film grain, candle flames flaring in soft painted glows. An alchemist in her forties, with grey-streaked hair and a charcoal apron, pours glowing gold liquid from a small iron crucible into a clear glass flask. The pour finishes completely. 2-5s: The camera pushes in slowly. The liquid in the flask stays gold and still. She holds exactly one crimson rose petal above the open mouth of the flask. 5-8s: She drops the petal. The petal touches the surface of the liquid. Only at that instant does the gold turn deep red, and the red spreads through all the liquid in the flask. 8-10s: She presses a glass stopper, cut like a jewel, into the neck of the flask. She turns the flask toward the camera like a finished perfume bottle, the red liquid filling the frame in warm painted highlights and deep shadow, soft cel shading with a muted, luxurious palette.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 28,
+  "scene": "Marketing & Advertising",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

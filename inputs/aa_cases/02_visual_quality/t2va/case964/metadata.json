@@ -1,0 +1,17 @@
+{
+  "case_id": "case964",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "0-2s: A woman in her 30s, wearing grey coveralls and safety glasses, sorts wrenches on a stainless steel workbench. Bright, even fluorescent light fills the tool-lined workshop. The camera is locked at bench height.\n2-4s: The overhead fluorescent lights flicker twice and go out. The room drops to near darkness, with only a faint grey glow from one small window.\n4-7s: She twists the knob of a hand lantern. Its warm light ramps smoothly from a faint dim glow to full brightness in her hands, lighting her face and the edge of the bench.\n7-10s: She raises the lantern and sweeps it in a wide arc across the room. Its glow moves as bright sliding reflections along the steel bench and the hanging tools, and the shadows swing around her as the light moves. The camera drifts slowly back to show more of the room. Photoreal safety-training footage, the only light comes from the lantern and the window, no subtitles.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 115,
+  "scene": "Productivity & Knowledge Work",
+  "aa_ability": "Lighting & Materials",
+  "ability_evaluation_criteria": "Lighting and material seem realistic and behaves as prompted",
+  "media_status": "missing_video"
+}

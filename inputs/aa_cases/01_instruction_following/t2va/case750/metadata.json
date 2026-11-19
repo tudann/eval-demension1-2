@@ -1,0 +1,17 @@
+{
+  "case_id": "case750",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Flat vector animation on a pale grey background. No hands ever appear.\nThis video has four shots, with a hard cut between each shot.\nShot 1: a coral nail-polish bottle tips over and pours out one coral stripe. Cut.\nShot 2: a violet bottle tips over and pours a second stripe right beside the first one. Both stripes are now on screen. Cut.\nShot 3: a mint bottle tips over and pours a third stripe beside the second one. All three stripes are now on screen. Cut.\nShot 4: the word LACQUER lands on screen. Its letters fill with colour from the bottom up, in coral, violet and mint.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 125,
+  "scene": "Retail & Ecommerce",
+  "aa_ability": "Multi-Scene & Narrative",
+  "ability_evaluation_criteria": "Shots follows direction, tells coherent story",
+  "media_status": "missing_video"
+}

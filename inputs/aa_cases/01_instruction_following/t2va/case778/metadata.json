@@ -1,0 +1,17 @@
+{
+  "case_id": "case778",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "A minimalist flat-design fleet-tracking dashboard fills the frame: a pale grey city map seen from directly above, one thin horizontal route line, and simple two-colour vehicle icons with soft shadows.\nTwo icons travel from left to right along the route line: a green garbage truck icon and a white delivery van icon. The truck is clearly behind the van, with a visible gap between them.\nA rounded tag reading \"NEXT STOP\" is attached to the van.\nThe truck speeds up. The gap between the truck and the van shrinks.\nThe truck draws level with the van. For a moment the two icons move side by side on parallel lanes.\nThe truck moves ahead of the van. Now the truck is in front and the van is behind, with a growing gap between them.\nThe instant the truck is fully in front, the \"NEXT STOP\" tag pops off the van and snaps onto the truck. The tag stretches slightly past its spot, then settles into place on the truck.\nThe truck reaches a depot marker at the right edge of the map first and stops.\nThe van pulls in and stops behind the truck.\nThe part of the route line behind both vehicles turns green.\nThe camera slides gently to the right the whole time, keeping both icons in frame through the entire overtake.\nThe van never passes the truck again. The icons never swap colours or shapes. The tag is never on both vehicles at the same time.\nSmooth, eased motion, calm and unhurried, one continuous take.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 38,
+  "scene": "UIUX & Motion Design",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

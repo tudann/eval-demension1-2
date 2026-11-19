@@ -1,0 +1,17 @@
+{
+  "case_id": "case988",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Realistic site training footage, flat overcast daylight, a locked wide shot from high above.\nFive orange cherry pickers stand in a straight row along a grey warehouse wall. Each cherry picker is a machine with a long arm and a basket on the end for lifting a worker. One worker in a safety harness stands in each of the five baskets.\nAll five arms extend at the same time. All five baskets rise together, in unison, up to the roofline.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 112,
+  "scene": "Productivity & Knowledge Work",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "case917",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Grainy livestream shopping-channel footage, slightly compressed image, bright even light, shot like a live commerce feed from a fixed camera.\nA demo kitchen set is built into the corner of a hotel lobby, with a brushed-steel freestanding gas stove at its centre.\nThe presenter, a woman in her 30s wearing a green apron, stands at the stove. Five shoppers in plain, dull-coloured coats stand in a loose semicircle facing her.\nThe camera is a locked-off medium-wide shot that keeps the presenter, the stove and all five shoppers in frame for the whole clip.\nShe lifts a steel pan over the burner. She pauses halfway through tilting the pan, holding it at an angle, then continues the tilt.\nA tall orange flame flares up from the burner around the pan.\nAll five shoppers' heads snap toward the flaring stove in the same instant.\nThen one shopper in a mustard-yellow coat raises her arm and points straight at the front control dial of the stove.\nThe presenter turns away from the pan to look at the pointing shopper and nods to her.\nThe remaining four shoppers turn their heads to look at the dial the mustard-coat shopper is pointing at.\nExactly five shoppers are in frame from first to last, nobody enters or leaves, and nobody looks into the camera.\nNo subtitles, no on-screen overlay graphics.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 122,
+  "scene": "Retail & Ecommerce",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

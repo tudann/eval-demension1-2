@@ -25,7 +25,7 @@ for case_id,metric in [('010201','D1.2'),('010401','D1.4')]:
     print('SUPPLEMENT_START '+metric,flush=True)
     with (RUN/(metric+'.log')).open('w') as log:
         p=subprocess.run(command,env=env,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,timeout=3600)
-    report_path=RUN/metric/(video.stem+'.json')
+    report_path=RUN/metric/'runs'/'local'/'01_instruction_following'/'direct'/video.stem/'result.json'
     report=json.loads(report_path.read_text()) if report_path.is_file() else None
     item={'metric':metric,'returncode':p.returncode,'elapsed_seconds':round(time.time()-started,2),
           'report':str(report_path),'metrics':report['metrics'] if report else None}

@@ -1,0 +1,33 @@
+subject_definitions:
+<Subject 1> is the vintage dark-navy diesel railcar in <Picture 1>, with a cream side stripe, round orange-red "日の出" front plate, round white headlight, riveted dark flank, and roof stack emitting gray-white exhaust.
+<Subject 2> is the man in a dark navy overcoat and dark trousers carrying a white cloth bundle in his left hand, seen from behind in <Picture 1>.
+<Subject 3> is the woman in a long camel coat, dark skirt, and dark shoes carrying a white cloth bag, seen from behind beside <Subject 2> in <Picture 1>.
+<Subject 4> are the 3–4 background passengers in dark coats partially silhouetted under the platform canopy in <Picture 1>.
+<Subject 5> is the station environment in <Picture 1>: cream-yellow wooden station building with gray-tiled roof and platform canopy, weathered wooden bench in the foreground-left, chain-link fence, white vertical "日の宿" signpost, wooden utility poles with wires, and the bright red cylindrical postbox on a concrete base at the platform edge.
+<Subject 6> is the landscape in <Picture 1>: hazy blue mountains, open fields, and pale overcast sky.
+<Picture 1> is the first-frame and last-frame anchor of the target video, defining the wide composition: bench foreground-left, postbox midground-left, passengers midground-center, train midground-right, mountains background.
+
+summary:
+[keyframe completion + reference generation] The target video is a 10-second, four-shot Showa-era Japanese rural railway documentary scene generated from <Picture 1>, which anchors the opening and closing wide compositions and supplies all subjects: <Subject 1> slowly departs the platform while <Subject 2>, <Subject 3>, and <Subject 4> walk unhurriedly toward the train's rear within <Subject 5> and <Subject 6>. No new people, props, or modern elements appear.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1], [Shot 2], [Shot 3], [Shot 4]): fully_preserved - the navy body, cream stripe, "日の出" front plate, riveted flank, and roof stack are retained; only its motion and steam output change.
+<Subject 2> (appears in [Shot 1], [Shot 3]): fully_preserved - navy overcoat, dark trousers, and white cloth bundle are retained.
+<Subject 3> (appears in [Shot 1], [Shot 3]): fully_preserved - camel coat, dark skirt, dark shoes, and white bag are retained.
+<Subject 4> (appears in [Shot 1], [Shot 4]): fully_preserved - the dark-coated background passengers remain under the canopy.
+<Subject 5> (appears in [Shot 1], [Shot 2], [Shot 3], [Shot 4]): fully_preserved - building, canopy, bench, fence, signpost, poles, and postbox stay in their original positions.
+<Subject 6> (appears in [Shot 1], [Shot 4]): fully_preserved - hazy mountains, fields, and pale overcast sky are retained.
+<Picture 1> ([Shot 1] first frame, [Shot 4] last frame): fully_preserved - the opening and closing wide compositions match the reference layout under the same soft overcast light.
+
+detailed_description:
+The target video uses a Showa-era Japanese rural railway documentary style with low-saturation natural color, real film grain, soft overcast daylight, and restrained cinematic framing; there is no narration, no on-screen text beyond the anchored signage, and no modern elements.
+[Shot 1] The frame opens exactly on <Picture 1>: <Subject 5>'s cream station building and canopy fill the left third, the narrow platform runs through center, <Subject 1> is stopped at the right in three-quarter front view, the wooden bench sits foreground-left with the chain-link fence behind it, the red postbox stands at the platform edge, poles and wires cross the pale sky, and <Subject 6>'s hazy mountains lie far behind. The roof stack releases a slow gray-white plume that rises, drifts right, and thins as it spreads. <Subject 2> and <Subject 3>, backs to camera with their white cloth bags, begin small unhurried steps toward the rear of the train while <Subject 4>'s darker silhouettes shift gently under the canopy — no running, no waving. The camera holds nearly still with a barely perceptible forward push of small amplitude at slow speed, letting the low-contrast light and grain carry the tone.
+[Shot 2] At 00:02.500, the shot cuts to a medium side view at platform height on <Subject 1>'s riveted dark flank, cream stripe, and windows, with the platform edge and the passing legs of <Subject 2> and <Subject 3> in the lower frame. The train creeps forward with heavy, gradual acceleration; the camera pans laterally in a slow, restrained documentary glide of moderate amplitude at slow speed, matching the train's speed so the wheels and underframe stay readable. The steam trail stretches backward from the stack, elongating and dissipating with the motion. <Subject 5>'s building remains left, the train right, passengers between — layout unchanged.
+[Shot 3] At 00:05.000, the shot cuts to a close detail insert on existing elements only: <Subject 1>'s wheel flanges pressing the rail with a faint visible tremor at the contact point, rust-flecked steel and worn paint in sharp focus; the stack puffing short bursts of steam that curl away behind; and at frame bottom, in soft focus, the dark shoes of <Subject 2> and <Subject 3> stepping steadily past the platform edge, their footfalls landing in rhythm with the rail clatter. The framing is steady and nearly handheld-still with a static hold, shallow depth of field, concrete and steel texture forward.
+[Shot 4] At 00:07.500, the shot cuts back to the opening wide composition of <Picture 1>: <Subject 1> eases away from the platform, its plume gradually diminishing to a thin wisp, wheels slowing their rhythm as the tail clears the frame edge. The platform settles into stillness — <Subject 5>'s bench, postbox, signpost, poles, fence, and building and <Subject 6>'s mountains untouched in their original positions under the same soft overcast light, the last steam dissolving into the pale sky. The camera holds a static wide hold, steady, through the final frame.
+
+overall_soundscape:
+Diegetic sound only: the soft hiss and sigh of released steam synced with the plume, a low diesel idle, rhythmic rail clatter tied to wheel rotation, footsteps on concrete synced with the passing shoes, and faint wind with distant birds; no narration and no voices.
+
+non_diegetic_music:
+N/A

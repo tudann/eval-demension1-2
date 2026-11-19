@@ -1,0 +1,17 @@
+{
+  "case_id": "case552",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Flat cartoon animation with simple shapes and solid colors, drawn like a clean workplace safety explainer. Every shot is fixed and steady, evenly lit on flat color fields. It is a frosty morning, with small white puffs of breath and exhaust.\n0-3s: A high wide shot moves down as a silver tanker truck with a red stripe on its cab drives into a fuel depot bay and stops.\n3-6s: Hard cut to a low fixed shot at the truck's wheels. The driver, wearing a bright safety vest, pushes yellow wheel chocks under the tires so the truck cannot roll. Then he clips a metal grounding clamp onto the truck's frame.\n6-10s: Hard cut to a fixed waist-height shot at the valve under the truck's tank. Gloved hands connect a thick fuel delivery hose to the valve. On a round dial gauge, the needle sweeps upward.\nThe same silver tanker with the red stripe appears in all three shots. No fuel spills.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 116,
+  "scene": "Productivity & Knowledge Work",
+  "aa_ability": "Multi-Scene & Narrative",
+  "ability_evaluation_criteria": "Shots follows direction, tells coherent story",
+  "media_status": "missing_video"
+}

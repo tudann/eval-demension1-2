@@ -1,0 +1,17 @@
+{
+  "case_id": "case569",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Flat retro advertising animation, like a 1950s travel poster: simple textured shapes, a limited warm palette of cream, rust red, gold, and deep brown, no outlines. The whole clip is one slow forward camera drift, with no visible cut anywhere; the only cut is hidden inside the foreground wipe.\nThe video opens on an empty field at dawn. Low mist hangs over rows of bare wooden animal pens and strings of small flags hanging still.\nA big black work horse pulling a red-and-gold painted cart crosses close in front of the camera, moving from left to right. Its dark flat side fills the whole frame, acting as a foreground wipe.\nAs the cart moves out of the frame, the same field is now at full midday. The pens are crowded with ponies. Traders wave their hats. Dust rises as soft flat shapes. Every pen and every string of flags is in exactly the same position it held at dawn.\nThe camera keeps moving forward along the same path into the show ring, where riders gallop past and kick up stylized flat dirt shapes.\nThe shot settles on the strings of flags, now snapping in the wind.\nA slow fade brings up a hand-painted poster line in circus lettering: 'THE AUTUMN HORSE FAIR, FIRST WEEKEND OF OCTOBER'.\nThe cart never reverses direction. The flat morning light changes to bright midday light only during the wipe, hidden while the cart fills the frame.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 49,
+  "scene": "Marketing & Advertising",
+  "aa_ability": "Multi-Scene & Narrative",
+  "ability_evaluation_criteria": "Shots follows direction, tells coherent story",
+  "media_status": "missing_video"
+}

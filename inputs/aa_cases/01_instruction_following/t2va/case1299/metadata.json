@@ -1,0 +1,17 @@
+{
+  "case_id": "case1299",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "A fashion model in a long emerald-green gown pulls the linen curtains fully open across a sunlit floor-to-ceiling window wall in a penthouse.\nAt the same moment, a mover in grey overalls pushes a white fabric sofa on small wheels across the oak floor, rolling in the opposite direction from the model.\nWide steady shot, photorealistic real estate listing video.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 160,
+  "scene": "Architecture & Real Estate",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

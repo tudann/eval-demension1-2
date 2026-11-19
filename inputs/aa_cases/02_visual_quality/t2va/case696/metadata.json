@@ -1,0 +1,17 @@
+{
+  "case_id": "case696",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Filmed in one unbroken take, architectural visualisation, photorealistic 8K. Starts on an extreme close-up of hand-glazed jade green tiles on the front of a restored public swimming baths in low winter sun. The hard, raking light finds every ripple and crack in the glaze and throws long, precise shadows. The camera moves back slowly and smoothly, revealing the interlocking blocks of the building. As the lens retreats, a gust strips a handful of leaves off a plane tree and skates them across the frame. The camera keeps moving back to reveal the tall glass hall behind, its steamed-up windows glowing warm against the cold front, bringing the handmade material and the civic building together in one glowing shot.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 50,
+  "scene": "Architecture & Real Estate",
+  "aa_ability": "Lighting & Materials",
+  "ability_evaluation_criteria": "Lighting and material seem realistic and behaves as prompted",
+  "media_status": "missing_video"
+}

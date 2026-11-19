@@ -1,0 +1,17 @@
+{
+  "case_id": "case1209",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Casual handheld phone clip at a busy pool deck, harsh midday sun with hard shadows, one continuous take held at chest height, loose framing that drifts with the action.\n0-2s: A woman in a green one-piece swimsuit sits on a striped towel. She rubs white sunscreen onto her shoulders. An orange sunscreen bottle stands upright beside her. Behind her are three things: a red cooler with a seagull standing on its lid, a yellow inflatable flamingo, and a blue beach umbrella.\n2-5s: A man in board shorts jumps into the pool behind her with his knees pulled to his chest and lands with a big splash. Water spray flies across the deck. The camera swings toward the splash.\n5-8s: A gust of wind flips the blue umbrella inside out. The seagull hops off the cooler lid and lands on the deck.\n8-10s: The woman puts the cap back on the orange bottle and shields her eyes with one hand.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 159,
+  "scene": "Consumer",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

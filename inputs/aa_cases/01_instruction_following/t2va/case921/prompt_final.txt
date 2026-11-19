@@ -1,0 +1,9 @@
+[Style] Photorealistic bright grocery-commercial look, very clean commercial finish, crisp daylight kitchen, hard overhead noon sun, colours staying clean and saturated through the whole tumble.
+
+[Visual] Camera locked off at counter level on a wooden counter, framed wide enough that every carrot stays inside the frame from the first spill to the final row. Three clear beats: the bag tips and spills, the hand builds the row, one carrot is lifted and put back.
+
+[Subject] A brown paper bag tips over. Six whole carrots with leafy green tops spill out of the bag onto the wooden counter. They tumble across the wood, roll, and come to rest. A hand enters from the right and lines all six carrots up in a neat horizontal row, with the green tops all pointing the same way. The hand then lifts one carrot up toward the camera, holds it for a moment, and sets it back down into its gap, so the row of six is complete again at the end.
+
+[Sounds] Soft thuds of carrots landing on wood, the paper bag crinkling as it empties, a light tap as the lifted carrot is set back into the row.
+
+[Avoid] No seventh carrot appears at any point. No carrot rolls out of frame or merges into another carrot. No second hand. The bag stays empty once it has spilled.

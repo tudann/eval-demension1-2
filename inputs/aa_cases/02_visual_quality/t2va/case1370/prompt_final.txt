@@ -1,0 +1,7 @@
+Next-gen sports video game character reveal, rendered in Unreal Engine, on a night training field with realistic physical lighting, no game interface on screen.
+A broad-shouldered quarterback runs fast across the wet turf. He wears a white mesh practice jersey streaked with mud. Flecks of mud kick off his shoes as he runs.
+The near half of the field is lit by one small bare floodlight on a tall pole. Under this light, his shadow on the turf is dark with a razor-sharp edge.
+The camera runs low at knee height beside him, keeping his shadow on the turf in frame the whole time.
+At midfield he runs under a huge canopy of frosted panels that covers the far half of the field and softens the light. Under the canopy, the edge of his shadow melts into a soft, gradual blur.
+He fakes one throw. He plants his feet. He throws a long, deep spinning pass. The camera rises slightly as he throws. The leather ball, covered in a texture of small bumps, spins close to the camera lens just before it leaves his hand.
+The mesh weave of the jersey and the small bumps on the ball never blur into flat colour, and no other light appears on the field.

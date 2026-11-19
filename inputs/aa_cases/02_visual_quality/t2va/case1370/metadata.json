@@ -1,0 +1,17 @@
+{
+  "case_id": "case1370",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Next-gen sports video game character reveal, rendered in Unreal Engine, on a night training field with realistic physical lighting, no game interface on screen.\nA broad-shouldered quarterback runs fast across the wet turf. He wears a white mesh practice jersey streaked with mud. Flecks of mud kick off his shoes as he runs.\nThe near half of the field is lit by one small bare floodlight on a tall pole. Under this light, his shadow on the turf is dark with a razor-sharp edge.\nThe camera runs low at knee height beside him, keeping his shadow on the turf in frame the whole time.\nAt midfield he runs under a huge canopy of frosted panels that covers the far half of the field and softens the light. Under the canopy, the edge of his shadow melts into a soft, gradual blur.\nHe fakes one throw. He plants his feet. He throws a long, deep spinning pass. The camera rises slightly as he throws. The leather ball, covered in a texture of small bumps, spins close to the camera lens just before it leaves his hand.\nThe mesh weave of the jersey and the small bumps on the ball never blur into flat colour, and no other light appears on the field.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 57,
+  "scene": "Animation & Gaming",
+  "aa_ability": "Lighting & Materials",
+  "ability_evaluation_criteria": "Lighting and material seem realistic and behaves as prompted",
+  "media_status": "missing_video"
+}

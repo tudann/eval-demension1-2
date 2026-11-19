@@ -1,0 +1,9 @@
+[Style] Observational documentary, photorealistic, natural grey morning light under heavy clouds, loose handheld camera that wobbles and never holds fully still, one continuous take at real speed.
+
+[Visual] A fish stall at a harbour. The stall has: a long display counter covered in crushed ice, with silver fish laid out on the ice; a pyramid of lemons at the near end of the counter; a brass weighing scale hanging over the middle of the counter; a chalkboard price sign propped up at the back; wooden crates stacked beside the counter; a red-and-white striped canvas awning overhead; and a seagull perched on a post at the far end.
+
+[Subject] A bright blue lobster runs the full length of the ice counter, from left to right. It pushes through the fish as it goes. It knocks over the pyramid of lemons, and the lemons tumble to the ground. It bumps the hanging brass scale, and the scale swings hard. The whole time, a fish seller in a yellow rubber apron chases the lobster along the counter, reaching for it. As the lemons fall, the seagull flies up off its post. The camera stays handheld at counter height and pans with the lobster the whole way, no cuts.
+
+[Sounds] Seagulls, harbour chatter, lemons thudding and rolling, ice scattering, the fish seller shouting "Oi, come back here!"
+
+[Avoid] Every part of the stall stays in the scene the whole time: nothing disappears, doubles, or turns into something else mid-shot. No second lobster. No subtitles.

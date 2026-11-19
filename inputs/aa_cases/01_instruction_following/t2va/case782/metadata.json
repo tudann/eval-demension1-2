@@ -1,0 +1,17 @@
+{
+  "case_id": "case782",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "[Style] Hand-drawn digital illustration. The mascots look textured and painterly, and they sit on clean, flat app interface panels. Cream background. Every character movement bounces a little past its end point before settling. Locked-off framing, the camera never moves. One continuous take.\n[Subject] The welcome screen of a savings app, split into two equal panels, left and right, each with its own mascot. In the left panel: a small armadillo with a shell made of separate grey segments. Next to the armadillo stands a vertical meter labelled \"SHELL FUND\". Below the meter sits a rounded chip showing a number. In the right panel: a green toucan with an orange beak. Next to the toucan stands an identical vertical meter labelled \"NEST FUND\", with its own rounded number chip below it. Gold coins rain down over the left panel only. As the coins land, the armadillo rolls up into a ball. Its shell segments flip from grey to gold one segment at a time, starting at the back of the shell and moving toward the front. Each time a segment turns gold, the armadillo's meter rises one step and the number on its chip ticks higher. The whole time, the toucan hops and flaps its wings in place with lots of energy, but it stays completely green. The toucan's meter never rises, and its chip stays fixed at \"0\".\n[Sounds] Soft coin plink sounds land in rhythm: one plink for each shell segment that turns gold.\n[Avoid] No gold appears anywhere on the toucan. No coins drift into the right panel. The two mascots never trade places or copy each other's actions.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 142,
+  "scene": "UIUX & Motion Design",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

@@ -1,0 +1,38 @@
+subject_definitions:
+<Subject 1> is the silver metallic five-claw snap fastener product (五爪扣) from <Video 1>, with its front and back forms, size, and proportion locked; it is never redesigned, recolored, or replaced.
+<Subject 2> is the snap installation pliers (安装钳) from <Video 1>, with a red handle in the early shots and a chrome/silver body in the later shots; its colors and structure are unchanged.
+<Subject 3> is the baby garment (衣服) from <Video 1>, with its tan cartoon bear print (red ears, red bow, green shirt), colorful "M·o·n" lettering in the original language and position, fabric edges, and snap positions structurally identical to the source; only its base color is replaced with a new target color.
+<Subject 4> is the baby shoe (鞋子) from <Video 1>, with its upper shape, white strap, beige textured rubber sole, snap construction, and "FASHION" printed insole locked; only its base color is replaced with a new target color.
+<Subject 5> is the jeans (牛仔裤) from <Video 1>, with its denim structure, stitching, zipper, and snap positions untouched, folded at the frame edge as in the source layout.
+<Subject 6> is the replacement pair of hands: an American white middle-class woman's hands with warm fair skin, a short nude-pink/milk-tea manicure, and a discreet thin gold ring, replacing the source's pink French-tip and floral nail art; a beaded bracelet appears on the wrist in the later shots as in the source.
+<Subject 7> is the replacement background environment: a quiet American old-money style home interior with warm ivory/light greige walls, a dark walnut tabletop over dark wood floor, soft diffused window light from the left, and low saturation, replacing the source's blurred plant/toy-TV/figurine set; it is dressed with a transparent storage box (透明收纳盒) of snap components, a leather storage box, a brass tray, a ceramic cup, a glass vase with white hydrangeas and eucalyptus, and stacked books, none of which occlude the product or hand movements.
+<Video 1> is the source video for the target video edit, providing the exact total runtime of 6.989 seconds, the seven-shot count, order, individual durations, hard-cut points, framing, composition, camera positions and angles, and every hand pose, pliers press, snap-closing gesture, garment fold, shoe rotation, and product placement.
+
+summary:
+[video editing + audio reference] The target video is a shot-for-shot re-enactment of <Video 1> at its exact 6.989-second runtime, preserving all seven quick close-up beats, hard cuts, framing, and pacing with no camera movement. Only four sanctioned replacements are applied: <Subject 7> replaces the original background, <Subject 6> replaces the original hands, and <Subject 3> and <Subject 4> receive new base colors while all structure, prints, and text stay locked. Diegetic foley is re-created to match each visible beat; no BGM, dialogue, narration, or subtitles.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]–[Shot 7]): fully_preserved - the silver metallic five-claw snap's form, size, and proportion are retained exactly.
+<Subject 2> (appears in [Shot 1]–[Shot 2], [Shot 4]–[Shot 7]): fully_preserved - the red handle in early shots and chrome/silver body in later shots are retained unchanged.
+<Subject 3> (appears in [Shot 1]–[Shot 4]): partially_preserved - the bear print, "M·o·n" lettering, fabric edges, and snap positions are retained; only the base garment color is replaced.
+<Subject 4> (appears in [Shot 5]–[Shot 7]): partially_preserved - the upper shape, white strap, beige sole, snap construction, and "FASHION" insole are retained; only the base shoe color is replaced.
+<Subject 5> (appears at the frame edge in [Shot 1]–[Shot 7] as in the source layout): fully_preserved - denim structure, stitching, zipper, and snap positions are untouched.
+<Subject 6> (appears in [Shot 1]–[Shot 7]): attribute_transfer - the source hand poses and gestures are mirrored exactly, transferred onto the replacement fair-skinned hands with nude-pink manicure and thin gold ring.
+<Subject 7> (appears in [Shot 1]–[Shot 7]): weak_reference - it replaces the original background set while keeping the source's composition logic, product positions, and blurred-depth feel.
+<Video 1> (shot count, order, durations, hard cuts, framing, camera positions, and all motion): fully_preserved - every beat, cut point, and gesture is mirrored 1:1.
+
+detailed_description:
+The target video is a 1:1 re-enactment of <Video 1> in a quiet American old-money home interior with low saturation, soft diffused window light from the left, warm ivory/light greige walls, a dark walnut tabletop over dark wood floor, and no camera movement of any kind in any shot — static close-ups only, hard cuts, no transitions, no slow motion, no freeze frames.
+[Shot 1] Extreme close-up, static, mirroring <Video 1>'s 0.0s beat: <Subject 6>, the fair-skinned woman's hands with short nude-pink manicure and thin gold ring, hold <Subject 3>, the baby garment in its new color with the tan bear print (red ears, red bow, green shirt) intact, while <Subject 2>, the red-handled snap pliers, presses <Subject 1>, a silver five-claw snap, into the fabric. <Subject 5>, the jeans, stays folded at the frame edge. The blurred midground shows <Subject 7>'s transparent storage box, brass tray, and glass vase with white hydrangeas. A soft fabric-friction foley accompanies the press.
+[Shot 2] At 00:01.000, a hard cut to the same static framing as the source's 1.0s beat: <Subject 2>'s red-handled jaws squeeze the snap home on <Subject 3>, the bear print and colorful "M·o·n" lettering visible at the fabric edge in their original language and position, with a ratcheting squeeze sound synced to the press.
+[Shot 3] At 00:02.000, a hard cut to the chrome-body tool angle from the source's 2.0s beat: <Subject 2> now shows its chrome/silver body, and <Subject 6>'s hands hold <Subject 3> with its two bear prints and "M·o·n" lettering intact; <Subject 7>'s leather storage box and ceramic cup sit softly blurred behind.
+[Shot 4] At 00:03.000, a hard cut mirroring the source's 3.0s beat: <Subject 6>'s fingers manually press the finished snaps of <Subject 3> closed one by one, each cap seating with a crisp metallic click synced to the visible finger press.
+[Shot 5] At 00:04.000, a hard cut to the source's 4.0s beat: close-up of <Subject 6>'s hands, now with the beaded bracelet on the wrist as in the source, holding <Subject 4>, the baby shoe in its new color with white strap and beige textured rubber sole, while <Subject 2> attaches a silver <Subject 1> snap to the strap; shoe-surface friction sounds under the press.
+[Shot 6] At 00:05.000, a hard cut to the source's 5.0s beat: the same static framing, <Subject 2> pressing the snap onto <Subject 4>'s white strap patch, the pink French nails of the source replaced by <Subject 6>'s nude-pink manicure, the click landing exactly as the jaws close.
+[Shot 7] At 00:06.000, a hard cut to the source's 6.0s beat: <Subject 4> turns to reveal its insole printed "FASHION" verbatim while <Subject 2> clamps the strap; the final frame matches the source's last frame, with <Subject 7>'s stacked books and eucalyptus blurred behind and no occlusion of the product or hands.
+
+overall_soundscape:
+Quiet indoor room tone with faint ambient household stillness throughout; diegetic foley only — soft fabric friction, the pliers' ratcheting squeeze, crisp metallic snap-closing clicks, and shoe-surface friction — each synced to its visible beat.
+
+non_diegetic_music:
+N/A

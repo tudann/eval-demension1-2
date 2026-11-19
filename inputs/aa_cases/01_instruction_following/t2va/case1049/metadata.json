@@ -1,0 +1,17 @@
+{
+  "case_id": "case1049",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "0-3s: Low golden sun lights two parallel snow lanes side by side. A snowshoer in a red jacket and big red snowshoes runs hard down the packed lane. A cross-country skier in blue glides on the smooth track right beside her. The snowshoer is a full body length behind the skier. Snow sprays off every stride, lit from behind.\n3-6s: The camera travels low and level beside the two lanes at the athletes' speed, keeping both athletes fully in frame. The snowshoer closes the gap and pulls exactly even with the skier, shoulder to shoulder.\n6-10s: The snowshoer keeps going faster and passes the skier, stride by stride, until the skier is a full body length behind her. The skier never breaks her rhythm. One continuous take, low golden backlight through the flying snow, photorealistic winter sportswear commercial.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 102,
+  "scene": "Marketing & Advertising",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

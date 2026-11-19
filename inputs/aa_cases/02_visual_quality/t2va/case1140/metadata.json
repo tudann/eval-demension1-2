@@ -1,0 +1,17 @@
+{
+  "case_id": "case1140",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "A single thick, puffy white cloud hangs low over a green field at golden hour. The flat bottom of the cloud glows through soft haze. A tall wooden ladder leans against the flat bottom of the cloud, as if the cloud were a solid ceiling.\nA painter in white overalls climbs six rungs of the ladder. Each hand and each foot lands on its own separate rung, one at a time.\nA metal paint bucket hangs hooked over the fingers of her left hand for the whole climb. The bucket swings with every reach she makes.\nThe camera starts at the foot of the ladder and rises smoothly beside her, keeping her hands, her feet, and the bucket in frame the whole way up.\nNear the top, she plants both feet on a high rung. She dips a wide paintbrush into the bucket. She sweeps one long gold stroke of paint across the flat bottom of the cloud, and the cloud dents softly under the brush.\nThe continuous single take ends on the finished gold stroke glowing against the backlit cloud.\nThe ladder never sinks into the cloud or into the ground. No rung bends, vanishes, or duplicates. The bucket never leaves her left hand and never jumps to her other hand.\nPhotorealistic and dreamlike: an impossible scene shown with full physical weight.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "AA_T2V_159_audit_20261111.xlsx",
+  "excel_row": 87,
+  "scene": "Frontier",
+  "aa_ability": "Human Anatomy",
+  "ability_evaluation_criteria": "Humans look realistic and natural, never uncanny",
+  "media_status": "missing_video"
+}

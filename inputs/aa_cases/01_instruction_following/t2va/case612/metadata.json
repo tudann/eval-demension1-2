@@ -1,0 +1,17 @@
+{
+  "case_id": "case612",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "0-2s: The view is a fixed high shot looking down at a full green sports field at a three-quarter angle, like a clean tabletop diorama built from flat shapes and solid colors. Heavy flat clouds sit above as simple gray shapes. On the near sideline, a groundskeeper in a yellow raincoat pushes a red lawn mower from left to right. On the far sideline, a gardener in blue overalls walks from right to left, pulling a white line-marking machine behind him.\n2-6s: Both trails grow steadily. A dark stripe of freshly cut grass extends behind the red mower, and only behind the red mower. A crisp white chalk line extends behind the line-marking machine, and only behind the line-marking machine. The two figures pass each other in the middle of the field without stopping. The dark stripe keeps following the red mower, and the white line keeps following the marking machine.\n6-10s: The two figures keep moving toward opposite corners of the field. Both full trails stay visible on the grass. The groundskeeper raises one hand in a wave. The gardener keeps walking without looking over. Flat vector animation with simple geometric shapes and solid color fields, the whole field in frame the entire time, no cuts.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 151,
+  "scene": "Animation & Gaming",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

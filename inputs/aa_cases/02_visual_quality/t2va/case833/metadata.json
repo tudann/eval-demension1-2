@@ -1,0 +1,17 @@
+{
+  "case_id": "case833",
+  "dimension": 2,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "0-2s: An open-top safari truck is parked on a grassy overlook in warm golden savanna light. A guide in khaki clothing stands on the hood of the truck. A vlogger in a green shirt stands on the ground below him, reaching up. The handheld camera is low, on the ground beside the truck, with the warm late-afternoon sun behind the two people.\n2-5s: He grips her forearm and she grips his forearm. He leans back and pulls her up. Her boot pushes off the curved metal above the front wheel. She climbs up and settles onto the roof rack. Both of their gripping hands stay visible through the whole climb.\n5-8s: He lifts a pair of black binoculars by the strap from around his neck and passes them up to her. Her fingers close around the binoculars while his hand is still holding them. Then he lets go.\n8-10s: She raises the binoculars to her eyes and looks toward a distant herd of animals. He points in the same direction. The camera tilts up with her. The whole clip is one unbroken photorealistic travel-vlog take.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "AA_T2V_159_audit_20261111.xlsx",
+  "excel_row": 134,
+  "scene": "Social Media & Creator Content",
+  "aa_ability": "Human Anatomy",
+  "ability_evaluation_criteria": "Humans look realistic and natural, never uncanny",
+  "media_status": "missing_video"
+}

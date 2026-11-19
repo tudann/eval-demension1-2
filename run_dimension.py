@@ -12,7 +12,7 @@ def run_dimension(dimension: int) -> int:
     parser.add_argument("video")
     parser.add_argument("--prompt")
     parser.add_argument("--reference", action="append", default=[])
-    parser.add_argument("--output-dir", default="reports")
+    parser.add_argument("--output-dir", default="outputs/d1_d2")
     parser.add_argument("--sample-fps", type=float, default=2.0)
     parser.add_argument("--max-frames", type=int, default=48)
     args = parser.parse_args()

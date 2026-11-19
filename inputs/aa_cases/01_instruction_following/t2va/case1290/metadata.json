@@ -1,0 +1,17 @@
+{
+  "case_id": "case1290",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "[Style] Photorealistic aerial footage under heavy cloud, flat grey light with no shadows, crisp detail on the brick walls and the cedar wood planter boxes, horizon level throughout.\n[Visual] One continuous descending take with no cuts: the camera starts just above the roof of a new apartment building, looking down into its paved courtyard. It sinks slowly and smoothly down until it settles at standing eye height inside the courtyard. All five planter boxes stay in frame the entire way down. Balconies look over the courtyard on every side, and a young olive tree stands at the centre of the courtyard.\n[Subject] Five gardeners in matching green aprons and rubber boots. Five raised cedar wood planter boxes stand around the courtyard, and one gardener stands at each box. All at the same time, each gardener tips a full wheelbarrow of dark soil into their own planter box. Then all five gardeners step back and stand up straight, just as the camera settles at eye height. In the final frame, all five gardeners are visible, each standing beside their own planter box.\n[Avoid] No sixth person enters the courtyard. No gardener appears on a balcony. No wheelbarrow or planter box duplicates.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 64,
+  "scene": "Architecture & Real Estate",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

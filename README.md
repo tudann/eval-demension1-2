@@ -29,24 +29,24 @@ CUDA_VISIBLE_DEVICES=6 ./run_eval.sh /absolute/video.mp4 \
 
 原风格入口可用：`python 01_instruction_following.py VIDEO --prompt PROMPT`、`python 02_visual_quality.py VIDEO`；使用前先 `source env.sh`。
 
-输出为 JSON、CSV、Markdown，包含每项指标的原始证据、分数、状态和错误。出现 `ERROR`、`MODEL_UNAVAILABLE` 或错误字段时入口返回非零退出码。`UNCALIBRATED`、`NEEDS_REVIEW`、`NOT_APPLICABLE`、`INSUFFICIENT_EVIDENCE` 含义延续原项目，不代表全部都获得确定分数；原项目的算法分数尚未通过人工标签标定，迁移不会改变其成熟度。
+单视频和批量都写到 `<输出目录>/runs/local/<维度目录>/<输入模式>/<case编号>/`。不在 case 目录中的视频使用输入模式 `direct`，case 编号取视频文件名。出现 `ERROR`、`MODEL_UNAVAILABLE` 或错误字段时入口返回非零退出码。`UNCALIBRATED`、`NEEDS_REVIEW`、`NOT_APPLICABLE`、`INSUFFICIENT_EVIDENCE` 含义延续原项目，不代表全部都获得确定分数；原项目的算法分数尚未通过人工标签标定，迁移不会改变其成熟度。
 
 ## 批量评估
 
-`inputs/manifest_d1_d2.json` 是原已生成视频清单中筛选出的35条 D1/D2 数据；视频仍指向 SHJ 的共享素材目录，原始 Prompt、参考图等元数据保留。`inputs/smoke.json` 和 `inputs/smoke/` 保存两条已复制到本目录的验收样本。
+`inputs/cases/` 是 35 条 D1/D2 case。每条放在 `维度目录/输入模式/case编号/` 下，评分提示词为 `prompt_final.txt`，视频为 `video.mp4`。首帧放 `input_01`，参考图从 `input_01` 顺序编号。`01_instruction_following` 只评 D1，`02_visual_quality` 只评 D2。`metadata.json` 保留模型名和原始提示词。视频与参考图链接到 SHJ 原文件。`inputs/manifest_d1_d2.json` 和 `inputs/smoke.json` 仍可直接传给批量入口。
 
 ```bash
-CUDA_VISIBLE_DEVICES=6 ./run_batch.sh inputs/manifest_d1_d2.json \
+CUDA_VISIBLE_DEVICES=6 ./run_batch.sh inputs/cases \
   --dimension 1 --dimension 2 --output-dir results/my_batch
 # 接续已有输出
-CUDA_VISIBLE_DEVICES=6 ./run_batch.sh inputs/manifest_d1_d2.json \
+CUDA_VISIBLE_DEVICES=6 ./run_batch.sh inputs/cases \
   --output-dir results/my_batch --resume
 # 保留已成功输出，仅重跑失败报告
-CUDA_VISIBLE_DEVICES=6 ./run_batch.sh inputs/manifest_d1_d2.json \
+CUDA_VISIBLE_DEVICES=6 ./run_batch.sh inputs/cases \
   --output-dir results/my_batch --retry-errors
 ```
 
-清单支持 JSON 数组或 CSV，必填 `video_path`，可选 `prompt`、`dimension`（1/2）、`case_id`、`model`、`reference_images`。相对输入路径按清单所在目录解析；CSV参考图以分号分隔。每行有 `dimension` 时只评该维度，CLI维度参数用于筛选；无该字段时使用CLI选择或默认两维。每个视频写入独立的 `D维度/模型/Case` 子目录，汇总在 `batch_summary.json`。`--limit N` 可先少量试跑。默认重算；复用输出时应确保输入和参数未变，避免将 `--resume` 的历史报告误当作新推理。不要让多个批次同时写同一输出目录。
+目录方式按文件夹决定维度；传入 `--dimension` 时只保留对应维度。旧清单支持 JSON 数组或 CSV，必填 `video_path`，可选 `prompt`、`dimension`（1/2）、`case_id`、`model`、`reference_images`。相对输入路径按清单所在目录解析；CSV参考图以分号分隔。结果目录与第 13–20 维相同：`<输出目录>/runs/local/<维度目录>/<输入模式>/<case编号>/` 下有 `facts.json`、`checklist.json`、`answers.json`、`result.json` 和 `stage_report.md`。批次汇总是 `runs/local/summary.json`、`summary.md` 和 `per_case.jsonl`。默认输出目录是 `outputs/d1_d2`。`--limit N` 可先少量试跑。默认重算；复用输出时应确保输入和参数未变，避免将 `--resume` 的历史报告误当作新推理。不要让多个批次同时写同一输出目录。重新生成目录可运行 `python scripts/stage_cases.py`。
 
 ## 环境与依赖
 

@@ -1,0 +1,17 @@
+{
+  "case_id": "case913",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Static wide shot on a wooden pier, light drizzle, photorealistic documentary footage.\nA kite vendor launches a bright yellow stunt kite into the air. Five adult bystanders stand on the pier. All five turn toward the kite at the same moment. Their heads follow the kite together as it climbs higher.\nThen the kite dives down low over their heads. At that exact moment, all five bystanders flinch back at the same time and then laugh together.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 155,
+  "scene": "Live-Action Film",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

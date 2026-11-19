@@ -1,0 +1,17 @@
+{
+  "case_id": "case921",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "[Style] Photorealistic bright grocery-commercial look, very clean commercial finish, crisp daylight kitchen, hard overhead noon sun, colours staying clean and saturated through the whole tumble.\n\n[Visual] Camera locked off at counter level on a wooden counter, framed wide enough that every carrot stays inside the frame from the first spill to the final row. Three clear beats: the bag tips and spills, the hand builds the row, one carrot is lifted and put back.\n\n[Subject] A brown paper bag tips over. Six whole carrots with leafy green tops spill out of the bag onto the wooden counter. They tumble across the wood, roll, and come to rest. A hand enters from the right and lines all six carrots up in a neat horizontal row, with the green tops all pointing the same way. The hand then lifts one carrot up toward the camera, holds it for a moment, and sets it back down into its gap, so the row of six is complete again at the end.\n\n[Sounds] Soft thuds of carrots landing on wood, the paper bag crinkling as it empties, a light tap as the lifted carrot is set back into the row.\n\n[Avoid] No seventh carrot appears at any point. No carrot rolls out of frame or merges into another carrot. No second hand. The bag stays empty once it has spilled.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 156,
+  "scene": "Retail & Ecommerce",
+  "aa_ability": "Complex Composition",
+  "ability_evaluation_criteria": "Things in the scene appear and behave like described in prompt",
+  "media_status": "missing_video"
+}

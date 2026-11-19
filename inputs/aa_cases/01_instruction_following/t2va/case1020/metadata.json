@@ -1,0 +1,17 @@
+{
+  "case_id": "case1020",
+  "dimension": 1,
+  "mode": "t2va",
+  "model": "default",
+  "task_type": "t2v",
+  "original_prompt": "Puppet stop-motion with visible frame-to-frame jitter, bright felt textures, a miniature circus tent ringed with tiny warm glowing bulbs. The same single puppet appears in all four launches.\n0-2s: Locked wide shot of the circus tent. A felt puppet man in a red jumpsuit and white helmet is shot out of a cannon. He flies clear over the safety net. Cut to a tight close shot: he flops into a haystack made of felt.\n2-4s: Second launch, seen from the same locked wide shot. Cut to a tight close shot: he bounces off the safety net.\n4-6s: Third launch, from the same locked wide shot; this time he does not fly far enough. Cut to a tight close shot: he drops into a pile of foam blocks.\n6-8s: Fourth launch: he flies in a high arc in extreme slow motion, back on the locked wide shot.\n8-10s: He lands flat on his back, exactly in the centre of the striped landing pad. Paper confetti bursts into the air. The words 'EVERY SHOW, A SHOWSTOPPER' appear on a stitched felt banner above the ring.",
+  "sha256": null,
+  "source_video_path": null,
+  "source_reference_images": [],
+  "source_workbook": "cases.xlsx",
+  "excel_row": 58,
+  "scene": "Animation & Gaming",
+  "aa_ability": "Multi-Scene & Narrative",
+  "ability_evaluation_criteria": "Shots follows direction, tells coherent story",
+  "media_status": "missing_video"
+}
